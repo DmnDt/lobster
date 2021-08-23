@@ -10,65 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_23_141621) do
+ActiveRecord::Schema.define(version: 2021_08_23_155435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "investments", force: :cascade do |t|
-    t.float "amount"
-    t.integer "status"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "investor_id"
-    t.index ["investor_id"], name: "index_investments_on_investor_id"
-  end
-
-  create_table "investors", force: :cascade do |t|
-    t.string "category"
-    t.string "type"
-    t.string "corporate_name"
-    t.text "investment_examples"
-    t.string "average_ticket"
-    t.string "thesis"
-    t.string "industries"
-    t.string "siret"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
-    t.index ["user_id"], name: "index_investors_on_user_id"
-  end
-
-  create_table "investees", force: :cascade do |t|
-    t.string "SIRET"
-    t.string "company_name"
-    t.string "NAF"
-    t.string "address"
-    t.string "activity"
-    t.string "president"
-    t.string "managing_director"
-    t.integer "shares"
-    t.text "table_cap"
-    t.integer "turnover_n_2"
-    t.integer "turnover_n_1"
-    t.integer "turnover_n"
-    t.integer "growth_n_2_n_1"
-    t.string "growth_n_1_n"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "projects", force: :cascade do |t|
-    t.integer "valuation"
-    t.integer "conversion_rate"
-    t.integer "coupon"
-    t.date "conversion_date"
-    t.integer "status"
-    t.integer "total_amount"
-    t.string "financing_thesis"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -91,6 +36,67 @@ ActiveRecord::Schema.define(version: 2021_08_23_141621) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "investees", force: :cascade do |t|
+    t.string "SIRET"
+    t.string "company_name"
+    t.string "NAF"
+    t.string "address"
+    t.string "activity"
+    t.string "president"
+    t.string "managing_director"
+    t.integer "shares"
+    t.text "table_cap"
+    t.integer "turnover_n_2"
+    t.integer "turnover_n_1"
+    t.integer "turnover_n"
+    t.integer "growth_n_2_n_1"
+    t.string "growth_n_1_n"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_investees_on_user_id"
+  end
+
+  create_table "investments", force: :cascade do |t|
+    t.float "amount"
+    t.integer "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "investor_id"
+    t.bigint "project_id"
+    t.index ["investor_id"], name: "index_investments_on_investor_id"
+    t.index ["project_id"], name: "index_investments_on_project_id"
+  end
+
+  create_table "investors", force: :cascade do |t|
+    t.string "category"
+    t.string "type"
+    t.string "corporate_name"
+    t.text "investment_examples"
+    t.string "average_ticket"
+    t.string "thesis"
+    t.string "industries"
+    t.string "siret"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_investors_on_user_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.integer "valuation"
+    t.integer "conversion_rate"
+    t.integer "coupon"
+    t.date "conversion_date"
+    t.integer "status"
+    t.integer "total_amount"
+    t.string "financing_thesis"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "investee_id"
+    t.index ["investee_id"], name: "index_projects_on_investee_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -99,6 +105,8 @@ ActiveRecord::Schema.define(version: 2021_08_23_141621) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "full_name"
+    t.string "category"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
