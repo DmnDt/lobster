@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_23_135936) do
+ActiveRecord::Schema.define(version: 2021_08_23_143351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "investments", force: :cascade do |t|
+    t.float "amount"
+    t.integer "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "investor_id"
+    t.index ["investor_id"], name: "index_investments_on_investor_id"
+  end
+
+  create_table "investors", force: :cascade do |t|
+    t.string "category"
+    t.string "type"
+    t.string "corporate_name"
+    t.text "investment_examples"
+    t.string "average_ticket"
+    t.string "thesis"
+    t.string "industries"
+    t.string "siret"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_investors_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
