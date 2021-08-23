@@ -10,18 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2021_08_23_143351) do
-=======
-ActiveRecord::Schema.define(version: 2021_08_23_143424) do
-
 ActiveRecord::Schema.define(version: 2021_08_23_141621) do
->>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "investments", force: :cascade do |t|
     t.float "amount"
     t.integer "status"
@@ -44,7 +37,8 @@ ActiveRecord::Schema.define(version: 2021_08_23_141621) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_investors_on_user_id"
-=======
+  end
+
   create_table "investees", force: :cascade do |t|
     t.string "SIRET"
     t.string "company_name"
@@ -74,6 +68,7 @@ ActiveRecord::Schema.define(version: 2021_08_23_141621) do
     t.string "financing_thesis"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -94,7 +89,6 @@ ActiveRecord::Schema.define(version: 2021_08_23_141621) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
->>>>>>> master
   end
 
   create_table "users", force: :cascade do |t|
