@@ -1,0 +1,2 @@
+class Investee < ApplicationRecord
+end
