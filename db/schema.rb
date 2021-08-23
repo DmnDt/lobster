@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_23_143424) do
+ActiveRecord::Schema.define(version: 2021_08_23_151148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 2021_08_23_143424) do
     t.string "growth_n_1_n"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_investees_on_user_id"
   end
 
   create_table "investments", force: :cascade do |t|
@@ -61,7 +63,9 @@ ActiveRecord::Schema.define(version: 2021_08_23_143424) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "investor_id"
+    t.bigint "project_id"
     t.index ["investor_id"], name: "index_investments_on_investor_id"
+    t.index ["project_id"], name: "index_investments_on_project_id"
   end
 
   create_table "investors", force: :cascade do |t|
@@ -89,6 +93,8 @@ ActiveRecord::Schema.define(version: 2021_08_23_143424) do
     t.string "financing_thesis"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "investee_id"
+    t.index ["investee_id"], name: "index_projects_on_investee_id"
   end
 
   create_table "users", force: :cascade do |t|
