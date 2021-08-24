@@ -1,0 +1,6 @@
+<% @investments.each do |investment| %>
+  <ul>
+    <li><strong>amount : </strong> <%=investment.amount %> </li>
+    <li><strong>status : </strong> <%= investment.status %> </li>
+  </ul>
+<% end %>
