@@ -1,6 +1,6 @@
 class InvestmentsController < ApplicationController
    def create
-    @investment.new(booking_params)
+    @investment.new(investment_params)
     @project = Project.find(params[:project_id])
     @investor = Investor.find(params[:investor_id])
     @investment.project = @project
