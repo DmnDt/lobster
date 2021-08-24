@@ -1,0 +1,7 @@
+<% @projects.each do |project| %>
+  <ul>
+    <li><strong>valuation : </strong> <%=project.valuation %> </li>
+    <li><strong>coupon : </strong> <%= project.coupon %> </li>
+    <li><strong>status : </strong> <%=project.status %> </li>
+  </ul>
+<% end %>
