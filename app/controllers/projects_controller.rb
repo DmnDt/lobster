@@ -16,11 +16,13 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects= Project.all
+    @projects = Project.all
   end
 
   def show
-    @project= Project.find(params[:id])
+    @investment = Investment.new
+    @project = Project.find(params[:id])
+    @investor = Investor.find(user: current_user)
   end
 
   private
