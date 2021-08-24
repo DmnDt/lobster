@@ -3,6 +3,6 @@
     <li><strong>valuation : </strong> <%=project.valuation %> </li>
     <li><strong>coupon : </strong> <%= project.coupon %> </li>
     <li><strong>status : </strong> <%=project.status %> </li>
-    <%= cl_image_tag @project.investee.user.photo.key, height: 300, width: 400, crop: :fill, class:"col-sm-4 p-0 bg-c-lite-green user-profile" %>
+    <%= cl_image_tag project.investee.user.photo.key, height: 300, width: 400, crop: :fill, class:"col-sm-4 p-0 bg-c-lite-green user-profile" %>
   </ul>
 <% end %>
