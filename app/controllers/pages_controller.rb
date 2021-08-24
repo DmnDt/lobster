@@ -3,4 +3,7 @@ class PagesController < ApplicationController
 
   def home
   end
+  def dashboard
+    @investments = Investment.where(investor: current_user.investor)
+  end
 end

@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2021_08_24_102335) do
 
   create_table "investments", force: :cascade do |t|
     t.float "amount"
-    t.integer "status", default: 0
+    t.integer "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "investor_id"

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => {:registrations => "registrations"}
   root to: 'pages#home'
+  get "dashboard", to: "pages#dashboard"
   resources :investments, only: [:create, :index] do
     member do
       put "mark_as_ter"
