@@ -1,0 +1,20 @@
+<%= simple_form_for @investor do |f| %>
+<div class="container">
+    <div>
+      <div class="col-12 col-md-6 offset-lg-3">
+        <div class="bg-white rounded p-3 mt-5 shadow">
+          <div class="form-inputs">
+          <%= f.input :category %>
+          <%= f.input :corporate_name %>
+          <%= f.input :investment_examples %>
+          <%= f.input :average_ticket %>
+          <%= f.input :thesis %>
+          <%= f.input :industries %>
+          <%= f.input :siret %>
+          <%= f.button :submit, class: 'btn btn-primary' %>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

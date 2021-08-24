@@ -1,0 +1,27 @@
+<%= simple_form_for @investee do |f| %>
+<div class="container">
+    <div>
+      <div class="col-12 col-md-6 offset-lg-3">
+        <div class="bg-white rounded p-3 mt-5 shadow">
+          <div class="form-inputs">
+          <%= f.input :SIRET %>
+          <%= f.input :company_name %>
+          <%= f.input :NAF %>
+          <%= f.input :address %>
+          <%= f.input :activity %>
+          <%= f.input :president %>
+          <%= f.input :managing_director %>
+          <%= f.input :shares %>
+          <%= f.input :table_cap %>
+          <%= f.input :turnover_n_2 %>
+          <%= f.input :turnover_n_1 %>
+          <%= f.input :turnover_n %>
+          <%= f.input :growth_n_2_n_1 %>
+          <%= f.input :growth_n_1_n %>
+          <%= f.button :submit, class: 'btn btn-primary' %>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
