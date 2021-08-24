@@ -7,7 +7,7 @@ class InvesteesController < ApplicationController
   def create
     @investee = Investee.new(investee_params)
     @user = current_user
-    @investee.user_id = @user
+    @investee.user = @user
 
     if @investee.save!
       redirect_to root_path
