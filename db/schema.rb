@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_24_102335) do
+ActiveRecord::Schema.define(version: 2021_08_24_122844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2021_08_24_102335) do
     t.integer "turnover_n_2"
     t.integer "turnover_n_1"
     t.integer "turnover_n"
-    t.integer "growth_n_2_n_1"
+    t.string "growth_n_2_n_1"
     t.string "growth_n_1_n"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
