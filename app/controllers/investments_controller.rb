@@ -1,8 +1,8 @@
 class InvestmentsController < ApplicationController
   def create
-    @investment.new(investment_params)
+    @investment = Investment.new(investment_params)
     @project = Project.find(params[:project_id])
-    @investor = Investor.find(params[:investor_id])
+    @investor = Investor.find_by(user: current_user)
     @investment.project = @project
     @investment.investor = @investor
     if @investment.save!

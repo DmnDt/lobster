@@ -22,7 +22,7 @@ class ProjectsController < ApplicationController
   def show
     @investment = Investment.new
     @project = Project.find(params[:id])
-    @investor = Investor.find(user: current_user)
+    @investor = Investor.find_by(user: current_user)
   end
 
   private
