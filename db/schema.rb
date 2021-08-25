@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_24_122844) do
+
+ActiveRecord::Schema.define(version: 2021_08_25_123530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "unaccent"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -59,7 +61,7 @@ ActiveRecord::Schema.define(version: 2021_08_24_122844) do
 
   create_table "investments", force: :cascade do |t|
     t.float "amount"
-    t.integer "status"
+    t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "investor_id"
@@ -93,6 +95,7 @@ ActiveRecord::Schema.define(version: 2021_08_24_122844) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "investee_id"
+    t.string "industry"
     t.index ["investee_id"], name: "index_projects_on_investee_id"
   end
 

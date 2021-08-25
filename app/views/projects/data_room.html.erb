@@ -1,0 +1,12 @@
+<h1>data room</h1>
+<% @project.documents.each do |document| %>
+  <div class="centered">
+    <div class="card-data">
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2072&q=80" />
+      <div class="card-product-infos">
+        <h2><%=link_to document.filename, cl_image_path(document.key, format: :pdf), target:"_blank" %></h2>
+        <%# <p>Product description with <strong>relevant info</strong> only.</p> %>
+      </div>
+    </div>
+  </div>
+<% end %>
