@@ -1,12 +1,36 @@
-.navbar-lewagon {
+.navbar-links{
+  font-family: 'Nunito';
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a{
+  color: black;
+}
+
+a:hover{
+  color: #FA7F72;
+  text-decoration: none;
+}
+
+.profil{
+  width: 20px;
+}
+
+.navbar-container{
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+nav.navbar-wrapper .navbar-link.left-bar:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 1px;
+    top: -2px;
+    left: -12px;
+    background: #eaeaea;
 }
