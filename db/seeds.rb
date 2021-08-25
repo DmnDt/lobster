@@ -13,13 +13,13 @@ Investor.destroy_all
 Project.destroy_all
 
 steve_jobs = User.create!(full_name: 'Steve Jobs', email: 'steve-jobs@apple.com', password: 'azerty', category: 'investee')
-photo = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1629811194/Elon_Musk_Royal_Society_mk09mp.jpg")
+photo = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1629811189/apple-steve-jobs-big1-1280x720_hdfvpw.jpg")
 steve_jobs.photo.attach(io: photo, filename: "JP2", content_type: "image/jpg")
 steve_jobs.save!
 puts "#{steve_jobs.full_name}"
 
 elon_musk = User.create!(full_name: 'Elon Musk', email: 'elon-musk@tesla.com', password: 'azerty', category: 'investee')
-photo = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1629811189/apple-steve-jobs-big1-1280x720_hdfvpw.jpg")
+photo = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1629811194/Elon_Musk_Royal_Society_mk09mp.jpg")
 elon_musk.photo.attach(io: photo, filename: "JP2", content_type: "image/jpg")
 elon_musk.save!
 puts "#{elon_musk.full_name}"
