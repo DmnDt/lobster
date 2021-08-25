@@ -20,6 +20,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @team_members = %w(Jean-Michel Jean-Claude Roberta) #generate array with API PAPPERS
     @investment = Investment.new
     @project = Project.find(params[:id])
     @investor = Investor.find_by(user: current_user)
