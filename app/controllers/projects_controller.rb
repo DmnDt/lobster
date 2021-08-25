@@ -17,6 +17,9 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    if params.dig(:search, :category).present?
+      @projects = Project.search_by_name_and_industry(params[:search][:category].join(" "))
+    end
   end
 
   def show
@@ -32,8 +35,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-
-    params.require(:project).permit(:valuation, :conversion_rate, :coupon, :conversion_date, :status, :total_amount, :financing_thesis, :investee_id, documents: [])
-
+    params.require(:project).permit(:name, :valuation, :industry, :conversion_rate, :coupon, :conversion_date, :status, :total_amount, :financing_thesis, :investee_id, documents: [])
   end
 end
