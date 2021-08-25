@@ -50,7 +50,6 @@
   font-family: 'Nunito';
   background-size: cover;
   background-position: center;
-  height: 180px;
   display: flex;
   padding: 10px;
   justify-content: space-between;
@@ -70,6 +69,7 @@
   justify-content: space-evenly;
   list-style-type: none;
   padding: 0;
+  margin :0;
   width: 100%;
   img{
     width:20px;
@@ -78,54 +78,59 @@
     font-family: 'Nunito';
     font-size: 8px;
     text-shadow: none;
+    margin: 0;
   }
 }
 
 #statistics {
   display: none;
-}
-
-#statistics:target {
-  display: block;
-}
-
-.card > img {
-  height: 200px;
   width: 100%;
-  object-fit: cover;
-}
-
-.card p {
-  font-size: 12px;
-  opacity: .7;
+  text-align: center;
+p{
+  font-family: 'Nunito';
+  font-size: 8px;
+  text-shadow: none;
   margin: 0;
+  }
 }
 
-.card .card-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
+// .card > img {
+//   height: 200px;
+//   width: 100%;
+//   object-fit: cover;
+// }
 
-.card .card-icons {
-  display: inline-flex;
-  justify-content: space-between;
-  // align-items: flex-end;
-  // position: relative;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  color: rgb(34, 34, 34);
-  margin: 0px;
-  width: 32px;
-  height: 32px;
-}
+// .card p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 0;
+// }
 
-.card-infos .card-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
+// .card .card-infos {
+//   padding: 16px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+// }
+
+// .card .card-icons {
+//   display: inline-flex;
+//   justify-content: space-between;
+//   // align-items: flex-end;
+//   // position: relative;
+//   align-items: center;
+//   justify-content: center;
+//   border: none;
+//   color: rgb(34, 34, 34);
+//   margin: 0px;
+//   width: 32px;
+//   height: 32px;
+// }
+
+// .card-infos .card-user {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }

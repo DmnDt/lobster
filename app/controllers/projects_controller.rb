@@ -28,9 +28,13 @@ class ProjectsController < ApplicationController
     @investor = Investor.find_by(user: current_user)
   end
 
+  def data_room
+    @project = Project.find(params[:id])
+  end
+
   private
 
   def project_params
-    params.require(:project).permit(:name, :valuation, :industry, :conversion_rate, :coupon, :conversion_date, :status, :total_amount, :financing_thesis, :investee_id)
+    params.require(:project).permit(:name, :valuation, :industry, :conversion_rate, :coupon, :conversion_date, :status, :total_amount, :financing_thesis, :investee_id, documents: [])
   end
 end
