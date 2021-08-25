@@ -38,4 +38,3 @@ project_steve_jobs.documents.attach(io: document1, filename: 'Bilan.pdf', conten
 document2 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1629885783/sample_h30d1q.pdf")
 project_steve_jobs.documents.attach(io: document2, filename: 'compte de résultat.pdf', content_type: 'application/pdf')
 project_steve_jobs.save!
-
