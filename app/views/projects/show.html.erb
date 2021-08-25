@@ -1,1 +1,6 @@
 <%= @project.valuation %>
+
+<%= simple_form_for @investment, url: project_investments_path(@project) do |f| %>
+<%= f.input :amount, input_html: {class: "w-100"}, wrapper_html: {class: "w-100 pr-3"} %>
+<%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>
