@@ -17,6 +17,9 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    if params[:search][:query].present?
+      @projects = Project.search_by_name_and_industry(params[:search][:query])
+    end
   end
 
   def show

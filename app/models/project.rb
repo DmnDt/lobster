@@ -1,9 +1,10 @@
 class Project < ApplicationRecord
   belongs_to :investee
   include PgSearch::Model
-  pg_search_scope :search_by_title_and_synopsis,
-                  against: [ :title, :synopsis ],
+  pg_search_scope :search_by_name_and_industry,
+                  against: [ :name, :industry ],
+                  ignoring: :accents,
                   using: {
-                    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+                    tsearch: { prefix: true }
                   }
 end
