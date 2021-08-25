@@ -1,3 +1,47 @@
+<div class="first-wrapper-index mx-2">
+  <div class="second-wrapper-index mx-2">
+    <div class="metriques">
+      <div class="metriques-box d-flex align-items-center justify-content-center">
+        <div class="metriques-investor align-items-center">
+        <%# intégrer une colonne wallet %>
+          <h2> <strong>500,000 €</strong></h2>
+          <p class="my-0">Dans votre portefeuille</p>
+        </div>
+        <div class="metriques-list">
+          <ul class="my-0">
+          <%# intégrer des colonnes investment,rendement, project_number, interests_sent %>
+            <li class="metriques-indiv"><strong>200,000 €</strong> déjà investis</li>
+            <li class="metriques-indiv"><strong>30,000 €</strong> de rendement</li>
+            <li class="metriques-indiv"><strong>12</strong> projets déjà financés</li>
+            <li class="metriques-indiv"><strong>10</strong> marques d’intérets acceptées</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="cards mx-1">
+        <a href="#statistics" class="cards-category d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image_tag 'Apple.png' ">
+          <div id="statistics">
+            <p>From bottom to over the top 🚀</p>
+            <button class="btn-flat-red">Intéressé</button>
+          </div>
+            <div class="cards-logo"><%= image_tag 'Apple.png', style: 'width: 50px' %></div>
+            <h3 class="py-2 m-0">Apple</h3>
+            <ul class="cards-icons">
+              <li><%= image_tag 'icons/001-flash.png' %> <p>200</p></li>
+              <li><%= image_tag 'icons/love-1617689.png' %> <p>200</p> </li>
+              <li><%= image_tag 'icons/notification-1617680.png' %> <p>200</p></li>
+              <li><%= image_tag 'icons/001-speech-bubble.png' %> <p>200</p></li>
+            </ul>
+        </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 <% @projects.each do |project| %>
   <ul>
     <li><strong>valuation : </strong> <%=project.valuation %> </li>
