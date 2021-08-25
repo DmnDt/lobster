@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   resources :investors, only: [:create, :new]
   resources :projects, only: [:index, :show] do
     resources :investments, only: [:create]
+    member do
+      get "data_room"
+    end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
