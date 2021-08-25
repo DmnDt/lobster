@@ -32,6 +32,8 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
+
     params.require(:project).permit(:valuation, :conversion_rate, :coupon, :conversion_date, :status, :total_amount, :financing_thesis, :investee_id, documents: [])
+
   end
 end
