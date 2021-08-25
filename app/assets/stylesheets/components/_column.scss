@@ -1,0 +1,51 @@
+.wrapper-show{
+  height: 100vh;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  background-color: #F9F9F9;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.module{
+  font-family: 'Nunito';
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  border-radius: 20px;
+  background-color: white;
+  margin: 10px;
+}
+
+.module.management{
+  display: flex;
+  flex-direction: column;
+  h2{
+    font-family: 'Nunito';
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 49px;
+  }
+}
+
+.team-cards{
+  display: flex;
+  flex-direction: column;
+}
+
+.team-player{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
