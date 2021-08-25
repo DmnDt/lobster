@@ -1,8 +1,92 @@
-.card {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 30px;
+// .container-index{
+//   margin-left: 10px;
+//   margin-right: 10px;
+// }
+
+.second-wrapper-index{
+  background-color: #F6F6F6;
+}
+
+.metriques{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.metriques-box{
+  background-color: white;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding: 25px;
+  border-radius: 70px;
+}
+
+.metriques-investor{
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 80%;
+  padding-right: 60px;
+  border-right: 3px solid #F6F6F6;
+}
+
+.metriques-list{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.metriques-indiv{
+  font-family: 'Nunito';
+  font-size: small;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.cards-category {
+  font-family: 'Nunito';
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(48, 47, 47, 0.1);
+  margin: 1em;
+}
+
+.cards-icons{
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  img{
+    width:20px;
+  }
+  p{
+    font-family: 'Nunito';
+    font-size: 8px;
+    text-shadow: none;
+  }
+}
+
+#statistics {
+  display: none;
+}
+
+#statistics:target {
+  display: block;
 }
 
 .card > img {
@@ -38,7 +122,6 @@
   width: 32px;
   height: 32px;
 }
-
 
 .card-infos .card-user {
   position: absolute;
