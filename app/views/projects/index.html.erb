@@ -19,12 +19,8 @@
       </div>
     </div>
     <div class="cards mx-1">
-        <a href="#statistics" class="cards-category d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image_tag 'Apple.png' ">
-          <div id="statistics">
-            <p>From bottom to over the top 🚀</p>
-            <button class="btn-flat-red">Intéressé</button>
-          </div>
-            <div class="cards-logo"><%= image_tag 'Apple.png', style: 'width: 50px' %></div>
+        <div class="cards-category d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image_tag 'Apple.png' ">
+          <div class="cards-logo"><%= image_tag 'Apple.png', style: 'width: 50px' %></div>
             <h3 class="py-2 m-0">Apple</h3>
             <ul class="cards-icons">
               <li><%= image_tag 'icons/001-flash.png' %> <p>200</p></li>
@@ -32,20 +28,11 @@
               <li><%= image_tag 'icons/notification-1617680.png' %> <p>200</p></li>
               <li><%= image_tag 'icons/001-speech-bubble.png' %> <p>200</p></li>
             </ul>
-        </a>
+          <div id="statistics">
+            <p>From bottom to over the top 🚀</p>
+            <button class="btn-flat-red">Intéressé</button>
+          </div>
+        </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-<% @projects.each do |project| %>
-  <ul>
-    <li><strong>valuation : </strong> <%=project.valuation %> </li>
-    <li><strong>coupon : </strong> <%= project.coupon %> </li>
-    <li><strong>status : </strong> <%=project.status %> </li>
-  </ul>
-<% end %>
