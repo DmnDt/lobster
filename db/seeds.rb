@@ -31,8 +31,8 @@ investee_elon_musk = Investee.create!(user_id: elon_musk.id, SIRET: "12824369313
 project_steve_jobs = Project.create!(name: "New offices", investee: investee_steve_jobs, industry: "Informatique", valuation: 2213402, conversion_rate: 1, coupon: 3, conversion_date: "2021/5/4", status: 0, total_amount: 10000, financing_thesis: "Buy offices in Texas")
 project_elon_musk = Project.create!(name: "AI is coming to Tesla", investee: investee_elon_musk, industry: "Automobile", valuation: 1234012, conversion_rate: 2, coupon: 5, conversion_date: "2022/4/9", status: 0, total_amount: 35000, financing_thesis: "IA department foundation")
 
-document1 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1629885876/dummy_pdf_tivwrp.pdf")
+document1 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1629908156/kucjb0cp9862qweu2quh2aa4d3dr.pdf")
 project_steve_jobs.documents.attach(io: document1, filename: 'Bilan.pdf', content_type: 'application/pdf')
-document2 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1629885783/sample_h30d1q.pdf")
+document2 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1629908156/s9vunlw7og86vxi3gnl4zen3xj9v.pdf")
 project_steve_jobs.documents.attach(io: document2, filename: 'compte de résultat.pdf', content_type: 'application/pdf')
 project_steve_jobs.save!
