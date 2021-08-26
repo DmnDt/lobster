@@ -1,14 +1,11 @@
 <!-- Formulaire investment -->
-
-<%= @project.valuation %>
-
 <%= simple_form_for @investment, url: project_investments_path(@project) do |f| %>
-<%= f.input :amount, input_html: {class: "w-100"}, wrapper_html: {class: "w-100 pr-3"} %>
+<%= f.input :amount, label:"Je veux investir 🚀🚀", placeholder:"20,000€" , input_html: {class: "w-100"}, wrapper_html: {class: "w-100 pr-3"} %>
 <% end %>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
+<button type="button" class="btn-flat-red" data-toggle="modal" data-target="#exampleModalLong">
+Go !
 </button>
 
 
@@ -18,7 +15,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button class= "btn btn-red" type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -27,7 +24,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" id="button_validate" class="btn btn-primary">Accept the terms</button>
+        <button type="button" id="button_validate" class="btn btn-primary">Je veux investir</button>
       </div>
     </div>
   </div>
