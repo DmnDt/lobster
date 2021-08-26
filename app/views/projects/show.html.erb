@@ -34,15 +34,19 @@
   </div>
   <div class="column financing">
     <div class="module" id="project-first">
-    Hello
+      <%= render 'components/project_show/engagement' %>
     </div>
-    <div class="module" id="project-second">
-    Hello
+    <div class="module risk-takers" id="project-second">
+      <h2 class="title">RISK TAKERS</h2>
+      <div class="team-cards">
+        <% @investors_list.each do | investor| %>
+          <%= render 'components/project_show/investors_list' %>
+        <% end %>
+      </div>
     </div>
     <div class="module" id="project-third">
-    Hello
+      <%= render 'components/project_show/NDA' %>
+      </div>
     </div>
   </div>
 </div>
-
-<%= render 'components/project_show/NDA' %>
