@@ -1,11 +1,36 @@
+.team_player{
+  vertical-align: middle;
+}
+
+.team_player:hover {
+  background-color: #FA7F72;
+}
+
 .avatar {
   height: 30px;
   width: 30px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
-  }
+}
 
-  .social_lkd{
-    width:20px;
-    height: 20px;
+.team-icons{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin :0;
+  width: 40%;
+  img{
+    width:18px;
   }
+  p{
+    font-family: 'Nunito';
+    font-size: 12px;
+    text-shadow: none;
+    margin: 0;
+  }
+}
+
+.social_lkd{
+  width:20px;
+  height: 20px;
+}

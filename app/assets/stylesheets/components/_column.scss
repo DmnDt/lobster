@@ -32,20 +32,43 @@
   flex-direction: column;
   h2{
     font-family: 'Nunito';
-    font-size: 36px;
-    font-weight: normal;
-    line-height: 49px;
+    font-size: 20px;
+    color: #FA7F72;
   }
 }
 
 .team-cards{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 3px;
+  margin-bottom: 5px;
+  width: 90%;
+  border-radius: 10px;
+  border-color: #e6e8e8;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .team-player{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 8px;
+}
+
+.team-avatar{
+  display: flex;
+  .avatar{
+    margin-right: 15px;
+  }
+  p{
+    font-family: 'Nunito';
+    color: #96999C;
+    font-weight: lighter;
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+  }
 }
