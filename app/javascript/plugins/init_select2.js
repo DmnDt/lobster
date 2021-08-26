@@ -4,7 +4,9 @@ import 'select2/dist/css/select2.css';
 
 
 const initSelect2 = () => {
-  $('.select2').select2();
+  $('.select2').select2({
+    placeholder: 'Select industries',
+  });
 };
 
 // const initSelect2 = () => {

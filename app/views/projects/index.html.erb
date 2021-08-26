@@ -18,10 +18,16 @@
         </div>
       </div>
     </div>
+    <%= simple_form_for :search, url: projects_path, method: :get do |f| %>
+      <%= f.input :category, label: false, as: :select, collection: Project.pluck(:industry).uniq, input_html: { multiple: true, class: "select2", style: "" }, include_hidden: false %>
+      <%= f.submit :search, class: 'btn btn-flat-orange search-button' %>
+    <% end %>
+    <br><br>
     <div class="cards mx-1">
+      <% @projects.each do |project| %>
         <div class="cards-category d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image_tag 'Apple.png' ">
           <div class="cards-logo"><%= image_tag 'Apple.png', style: 'width: 50px' %></div>
-            <h3 class="py-2 m-0">Apple</h3>
+            <h3 class="py-2 m-0"><%= project.investee.company_name %></h3>
             <ul class="cards-icons">
               <li><%= image_tag 'icons/001-flash.png' %> <p>200</p></li>
               <li><%= image_tag 'icons/love-1617689.png' %> <p>200</p> </li>
@@ -33,6 +39,7 @@
             <button class="btn-flat-red">Intéressé</button>
           </div>
         </div>
+      <% end %>
     </div>
   </div>
 </div>
