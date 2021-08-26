@@ -1,0 +1,82 @@
+#project-first{
+  display: block;
+  justify-content: center;
+  margin: 10px;
+  padding: 0;
+}
+
+.module {
+  .title {
+    width: 100%;
+    h2 {
+      font-family: 'Nunito';
+      font-size: 20px;
+      color: #FA7F72;
+      text-align: center;
+    }
+  }
+}
+
+.module {
+  .figures {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    .figure {
+      margin: 3px;
+      border-color: #e7e8e8;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 10px;
+      padding: 0px 11px;
+      .metric{
+        font-family: 'Nunito';
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+        font-weight: bolder;
+       }
+      .definition{
+        font-family: 'Nunito';
+        font-size: 8px;
+        margin: 0;
+        padding: 0;
+       }
+    }
+  }
+}
+
+.module {
+  .valuation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    .figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 40%;
+      background-color: #A4F6A5;
+      color: black;
+      padding: 0px 11px;
+      margin: 3px;
+      border-radius: 10px;
+      .metric{
+        font-family: 'Nunito';
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+        font-weight: bolder;
+       }
+      .definition{
+        font-family: 'Nunito';
+        font-size: 8px;
+        margin: 0;
+        padding: 0;
+       }
+    }
+  }
+}

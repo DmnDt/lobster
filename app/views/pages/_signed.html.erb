@@ -1,1 +1,20 @@
-<h1>signed</h1>
+<% @investments.each do |investment| %>
+  <% if investment.status == 2 %>
+    <ul>
+      <li><strong>Entreprise : </strong> <%=investment.project.investee.company_name %> </li>
+      <li><strong>Projet : </strong> <%=investment.project.name %> </li>
+      <li><strong>Montant : </strong> <%=investment.amount.round %> €</li>
+      <li>
+        <strong>Statut : </strong>
+        <% if (investment.status == 0) %>
+          <%= "Intérêt déclaré" %>
+        <% elsif (investment.status == 1) %>
+          <%= "Contrat signé" %>
+        <% elsif (investment.status == 2) %>
+          <%= "Validé" %>
+        <% end %>
+      </li>
+      <button class= "btn btn-flat-red"><%= link_to "Dataroom", data_room_project_path(investment.project) %></button>
+    </ul>
+  <% end %>
+<% end %>

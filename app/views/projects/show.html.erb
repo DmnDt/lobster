@@ -1,83 +1,52 @@
-<%= @project.valuation %>
-
-<%= simple_form_for @investment, url: project_investments_path(@project) do |f| %>
-<%= f.input :amount, input_html: {class: "w-100"}, wrapper_html: {class: "w-100 pr-3"} %>
-<%# <%= f.button :submit, class: 'btn btn-primary' %>
-<% end %>
-
-<<<<<<< HEAD
-<%# /////////////////////// %>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
 <div class="wrapper-show">
   <div class="column company">
     <div class="module management" id="company-first">
-      <h2> Team </h2>
+      <h2> TEAM </h2>
       <div class="team-cards">
-      <% @team_members.each do | team_member| %>
-      <%= render 'components/team_member' %>
-      <% end %>
+        <% @team_members.each do | team_member| %>
+          <%= render 'components/project_show/team_member' %>
+        <% end %>
       </div>
     </div>
     <div class="module" id="company-second">
-    Hello
+    <div class="operation wrapper-card">
+        <%= render 'components/project_show/operation' %>
+      </div>
     </div>
     <div class="module" id="company-third">
-    Hello
+      <div class="operation wrapper-card">
+        <%= render 'components/project_show/traction' %>
+      </div>
     </div>
   </div>
   <div class="column project">
     <div class="module" id="project-first">
-    Hello
+      <%= render 'components/project_show/valuation' %>
     </div>
     <div class="module" id="project-second">
-    Hello
+      <div class="operation wrapper-card">
+        <%= render 'components/project_show/projection' %>
+      </div>
     </div>
     <div class="module" id="project-third">
-    Hello
+      <%= render 'components/project_show/thesis' %>
     </div>
   </div>
   <div class="column financing">
     <div class="module" id="project-first">
-    Hello
+      <%= render 'components/project_show/engagement' %>
     </div>
-    <div class="module" id="project-second">
-    Hello
+    <div class="module risk-takers" id="project-second">
+      <h2 class="title">RISK TAKERS</h2>
+      <div class="team-cards">
+        <% @investors_list.each do | investor| %>
+          <%= render 'components/project_show/investors_list' %>
+        <% end %>
+      </div>
     </div>
     <div class="module" id="project-third">
-    Hello
-=======
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <%= render 'components/project_show/NDA' %>
       </div>
-      <div class="modal-body">
-        <%= render "loi" %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" id="button_validate" class="btn btn-primary">Accept the terms</button>
-      </div>
->>>>>>> 6205c912242dda94c8e1e0e4cce7c1714d0810e0
     </div>
   </div>
 </div>

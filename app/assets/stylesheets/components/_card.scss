@@ -10,9 +10,12 @@
 .metriques{
   padding-top: 20px;
   padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .metriques-box{
+  display: inline-flex;
   background-color: white;
   margin-left: 40px;
   margin-right: 40px;
@@ -50,7 +53,7 @@
   font-family: 'Nunito';
   background-size: cover;
   background-position: center;
-  display: flex;
+  display: block;
   padding: 10px;
   justify-content: space-between;
   align-items: center;

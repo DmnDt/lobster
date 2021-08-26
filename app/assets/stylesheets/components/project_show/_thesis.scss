@@ -1,0 +1,66 @@
+#project-third{
+  justify-content: center;
+}
+
+body {
+    background-color: #eee
+}
+
+.card {
+    border: none;
+    border-radius: 10px
+}
+
+.c-details span {
+    font-weight: 300;
+    font-size: 13px
+}
+
+.icon {
+    margin-right: 10px;
+    img{
+      width: 40px;
+      border-radius: 50%;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      border: white 1px solid;
+    }
+}
+
+.badge span {
+    background-color: #fffbec;
+    width: 60px;
+    height: 25px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    display: flex;
+    color: #fed85d;
+    justify-content: center;
+    align-items: center
+}
+
+.progress {
+    height: 10px;
+    border-radius: 10px
+}
+
+.progress div {
+    background-color: #FA7F72;
+}
+
+.text1 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.text2 {
+    color: #a5aec0
+}
+
+.heading{
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 27px;
+  font-style: italic;
+}

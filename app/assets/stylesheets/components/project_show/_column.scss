@@ -1,5 +1,4 @@
 .wrapper-show{
-  height: 100vh;
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -11,6 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 .module{
@@ -28,24 +28,41 @@
 }
 
 .module.management{
-  display: flex;
-  flex-direction: column;
+  display: block;
+  text-align: center;
   h2{
     font-family: 'Nunito';
-    font-size: 36px;
-    font-weight: normal;
-    line-height: 49px;
+    font-size: 20px;
+    color: #FA7F72;
   }
 }
 
 .team-cards{
-  display: flex;
-  flex-direction: column;
+  border-radius: 10px;
+  border-color: #e6e8e8;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .team-player{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding: 8px;
+}
+
+.team-avatar{
+  display: flex;
+  .avatar{
+    margin-right: 15px;
+  }
+  p{
+    font-family: 'Nunito';
+    color: #96999C;
+    font-weight: lighter;
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+  }
 }
