@@ -1,0 +1,4 @@
+<%= simple_form_for :search, url: projects_path, method: :get do |f| %>
+  <%= f.input :category, label: false, as: :select, collection: Project.pluck(:industry).uniq, input_html: { multiple: true, class: "select2" }, include_hidden: false %>
+  <%= f.submit :search, input_html: { class: "btn btn-primary" } %>
+<% end %>

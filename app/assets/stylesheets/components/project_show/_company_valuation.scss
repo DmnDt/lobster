@@ -1,8 +1,7 @@
-#company-second{
+#project-first{
   display: block;
   justify-content: center;
-  text-align: center;
-  margin: 0;
+  margin: 10px;
   padding: 0;
 }
 
@@ -13,6 +12,7 @@
       font-family: 'Nunito';
       font-size: 20px;
       color: #FA7F72;
+      text-align: center;
     }
   }
 }
@@ -52,14 +52,13 @@
   .valuation {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    align-items: center;
+    padding: 5px;
     .figure {
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 40%;
       background-color: #A4F6A5;
       color: black;
       padding: 0px 11px;

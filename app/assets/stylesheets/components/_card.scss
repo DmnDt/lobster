@@ -10,9 +10,12 @@
 .metriques{
   padding-top: 20px;
   padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .metriques-box{
+  display: inline-flex;
   background-color: white;
   margin-left: 40px;
   margin-right: 40px;
