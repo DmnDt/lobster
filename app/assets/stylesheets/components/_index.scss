@@ -1,7 +1,7 @@
 // Import your components CSS files here.
 @import "alert";
-@import "avatar";
-@import "navbar";
+@import "navbar/avatar";
+@import "navbar/navbar";
 @import "text";
 @import "button";
 @import "input";
@@ -9,4 +9,9 @@
 @import "card";
 @import "search-form";
 @import "card_data";
-@import "company_valuation";
+@import "project_show/company_valuation";
+@import "project_show/team_member";
+@import "project_show/column";
+@import "project_show/operation";
+@import "project_show/projection";
+@import "project_show/thesis";

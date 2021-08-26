@@ -1,13 +1,7 @@
-
-<%= simple_form_for :search, url: projects_path, method: :get do |f| %>
-  <%= f.input :category, label: false, as: :select, collection: Project.pluck(:industry).uniq, input_html: { multiple: true, class: "select2" }, include_hidden: false %>
-  <%= f.submit :search, input_html: { class: "btn btn-primary" } %>
-<% end %>
-
 <div class="first-wrapper-index mx-2">
   <div class="second-wrapper-index mx-2">
     <div class="metriques">
-      <div class="metriques-box d-flex align-items-center justify-content-center">
+      <div class="metriques-box align-items-center justify-content-center">
         <div class="metriques-investor align-items-center">
         <%# intégrer une colonne wallet %>
           <h2> <strong>500,000 €</strong></h2>
@@ -42,14 +36,3 @@
     </div>
   </div>
 </div>
-
-<%# ////////// %>
-
-<% @projects.each do |project| %>
-  <ul>
-    <li><strong>valuation : </strong> <%=project.valuation %> </li>
-    <li><strong>coupon : </strong> <%= project.coupon %> </li>
-    <li><strong>status : </strong> <%=project.status %> </li>
-    <%= cl_image_tag project.investee.user.photo.key, height: 300, width: 400, crop: :fill, class:"col-sm-4 p-0 bg-c-lite-green user-profile" %>
-  </ul>
-<% end %>
