@@ -14,14 +14,14 @@ Project.destroy_all
 investor = User.create!(full_name: 'Investor', email: 'investor@gmail.com', password: 'azerty', category: 'investor')
 investor.save!
 steve_jobs = User.create!(full_name: 'Steve Jobs', email: 'steve-jobs@apple.com', password: 'azerty', category: 'investee')
-photo = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1629811189/apple-steve-jobs-big1-1280x720_hdfvpw.jpg")
-steve_jobs.photo.attach(io: photo, filename: "JP2", content_type: "image/jpg")
+# photo = asset-url("Apple")
+steve_jobs.photo.attach(io: File.open('app/assets/images/Apple.png'), filename: "JP2", content_type: "image/png")
 steve_jobs.save!
 puts "#{steve_jobs.full_name}"
 
 elon_musk = User.create!(full_name: 'Elon Musk', email: 'elon-musk@tesla.com', password: 'azerty', category: 'investee')
-photo = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1629811194/Elon_Musk_Royal_Society_mk09mp.jpg")
-elon_musk.photo.attach(io: photo, filename: "JP2", content_type: "image/jpg")
+# photo = asset-url("Tesla")
+elon_musk.photo.attach(io: File.open('app/assets/images/Tesla.png'), filename: "JP2", content_type: "image/png")
 elon_musk.save!
 puts "#{elon_musk.full_name}"
 
@@ -41,8 +41,13 @@ document2 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1630057
 project_steve_jobs.documents.attach(io: document2, filename: 'compte de résultat.pdf', content_type: 'application/pdf')
 project_steve_jobs.save!
 
+
 document3 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1630057146/Balance_Sheet_ek8qmu.pdf")
 document4 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1630057164/Financials_x34qf5.pdf")
 project_elon_musk.documents.attach(io: document3, filename: 'Bilan.pdf', content_type: 'application/pdf')
 project_elon_musk.documents.attach(io: document4, filename: 'compte de résultat.pdf', content_type: 'application/pdf')
 project_elon_musk.save!
+
+# stevejobsphoto = https://res.cloudinary.com/dgkikk5i4/image/upload/v1629811189/apple-steve-jobs-big1-1280x720_hdfvpw.jpg
+# elonmuskphoto = https://res.cloudinary.com/dgkikk5i4/image/upload/v1629811194/Elon_Musk_Royal_Society_mk09mp.jpg
+
