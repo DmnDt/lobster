@@ -27,7 +27,7 @@ a {
   letter-spacing: 1px;
 }
 
-p {
+.description {
   font-size: 0.9rem;
   margin: 1rem 0;
   line-height: 1.5;
@@ -40,32 +40,17 @@ section {
   padding: 30px;
 }
 
+h1{
+  color: black;
+  margin-bottom: 70px;
+}
+
 h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: #333;
   font-size: 1.825rem;
   margin: 1.3rem 0;
-}
-
-.section-lead {
-  max-width: 600px;
-  margin: 1rem auto 1.5rem;
-}
-
-.service a {
-  color: #5b7abb;
-  display: block;
-}
-
-.service h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #56ceba;
-  font-size: 1.3rem;
-  margin: 1rem 0 0.6rem;
-  text-align: center;
-
 }
 
 .services-grid {
@@ -80,102 +65,58 @@ h3 {
   margin: 20px;
   padding: 20px;
   border-radius: 4px;
-  text-align: center;
-  -webkit-box-flex: 1;
+  text-align: left;
   flex: 1;
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid #e7e7e7;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  height: 300px
-}
-
-.service:hover {
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-}
-
-.service i {
-  font-size: 3.45rem;
-  margin: 1rem 0;
-}
-
-.service1 i,
-.service1 h4,
-.service1 .cta {
-  color: #0d0d0e;
-}
-
-.service1:hover {
-  border: 2px solid #42b7ca;
-}
-
-.service2 i,
-.service2 h4,
-.service2 .cta {
-  color: #425fca;
-}
-
-.service2:hover {
-  border: 2px solid #425fca;
-}
-
-.service3 i,
-.service3 h4,
-.service3 .cta {
-  color: #9c42ca;
-}
-
-.service3:hover {
-  border: 2px solid #9c42ca;
-}
-
-.service .cta span {
-  font-size: 0.6rem;
-}
-
-.service > * {
-  flex: 1 1 100%;
-}
-
-.service .cta {
-  align-self: flex-end;
-}
-
-@media all and (max-width:900px) {
-  .services-grid {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
+  height: 300px;
+  h4{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 30px;
+    line-height: 70px;
+    text-align: left;
+    color: black;
   }
 }
+
 .smart_money {
-  background: #fff;
+  width: 100% !important;
+  background: #F9F9F9;
   margin: 20px;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 5px;
   text-align: center;
   -webkit-box-flex: 1;
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid #e7e7e7;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background-color: #F7F3F2;
   height: 500px;
   width: 700px;
-  color: #56ceba;
-  font-weight: 600;
-  font-size: 1.3rem;
-  font-family: 'Montserrat', sans-serif;
+    .title_block {
+      color:black;
+      text-align: left;
+    .title_orange{
+      color: #FFA372;
+      }
+    .title_red{
+      color: #FA7F72;
+      }
+    }
+   h4{
+    color: black;
+    font-family: 'Nunito';
+    font-weight: thin;
+    text-align: left;
+  }
+}
+
+.smart_invest{
+  align-items: center;
 }
 
 .smart_money_img {
@@ -196,7 +137,6 @@ h3 {
   background-color: #F7F3F2;
   height: 500px;
   width: 800px;
-  color: #56ceba;
   font-weight: 600;
   font-size: 1.3rem;
   font-family: 'Montserrat', sans-serif;
@@ -220,7 +160,6 @@ h3 {
   background-color: #F7F3F2;
   height: 500px;
   width: 800px;
-  color: #56ceba;
   font-weight: 600;
   font-size: 1.3rem;
   font-family: 'Montserrat', sans-serif;
@@ -245,7 +184,6 @@ h3 {
   background-color: #F7F3F2;
   height: 500px;
   width: 800px;
-  color: #56ceba;
   font-weight: 600;
   font-size: 1.3rem;
   font-family: 'Montserrat', sans-serif;
@@ -270,7 +208,6 @@ h3 {
   background-color: #F7F3F2;
   height: 500px;
   width: 800px;
-  color: #56ceba;
   font-weight: 600;
   font-size: 1.3rem;
   font-family: 'Montserrat', sans-serif;
@@ -294,42 +231,26 @@ h3 {
   background-color: #F7F3F2;
   height: 500px;
   width: 800px;
-  color: #56ceba;
   font-weight: 600;
   font-size: 1.3rem;
   font-family: 'Montserrat', sans-serif;
 }
-.smart_money p{
-  text-align: center;
-}
+
 .block1 {
-    display: inline-flex;
+    display: flex;
     justify-content: space-evenly;
-    width: -webkit-fill-available;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-
-}
-
-line {
-  align-items: center;
+    border-top: 2px solid #F9F9F9;
+    margin: 100px auto;
+    width: 50%;
 }
 
 .block_investor {
     display: flex;
-    // justify-content: space-around;
-    // width: -webkit-fill-available;
-}
-
-.title_block {
-  color:black
+    align-items: center;
+    text-align: left;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
@@ -366,13 +287,80 @@ body {
     }
 }
 
+/* Newsletter
+-------------------------------------------------- */
+.newsletter{
+  h1{
+    margin-bottom: 30px;
+  }
+  h4{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .btn-flat-red{
+    color: white;
+    font-family: 'Nunito';
+    font-size: 12px;
+    padding: 10px 40px;
+    border-radius: 50px;
+    border: none;
+    background: #FA7F72;
+    transition: background-color 0.3s ease;
+    justify-content: space-around;
+  }
+  .Email{
+    border: 1px solid #FA7F72;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 27px;
+    padding: 3px 33px;
+    color: #FA7F72;
+    margin-right: 10px;
+  }
+}
+
+
 /* Sticky footer style and color
 -------------------------------------------------- */
-footer {
+.footer-lobster {
+  display: flex;
   padding-top: 30px;
-  background-color: #292c2f;
+  background-color: #F9F9F9;
   color: #bbb;
+  background-position: cover;
+  margin: 30px;
+  padding: 30px;
 }
+
+.width-column{
+  margin-left: 20px;
+  width: 30%;
+}
+
+.first-column {
+  h5{
+    font-family: 'Urbanist';
+    text-align: left;
+  }
+  p{
+    text-align: left;
+  }
+  .nav{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    width: 33%;
+    img{
+      width:20px;
+    }
+  }
+}
+
 
 footer a {
   color: #999;
@@ -386,10 +374,10 @@ footer a:hover, footer a:focus {
 }
 
 footer .form-control {
-    background-color: #1f2022;
-    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
-    border: none;
-    resize: none;
-    color: #d1d2d2;
-    padding: 0.7em 1em;
+  background-color: #1f2022;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border: none;
+  resize: none;
+  color: #d1d2d2;
+  padding: 0.7em 1em;
 }

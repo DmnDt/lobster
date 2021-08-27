@@ -5,6 +5,24 @@
   text-decoration: none;
 }
 
+.logo{
+  display: flex;
+  margin-right: 25px;
+  h1{
+    font-family: 'Rampart One';
+    font-size: 35px;
+    color: #FFA372;
+    span{
+    color: #FA7F72;
+    }
+  }
+
+  .logo-lobster{
+    width: 80px;
+    height: 80px;
+  }
+}
+
 a{
   color: black;
 }
@@ -40,5 +58,4 @@ nav.navbar-wrapper .navbar-link.left-bar:before {
 }
 .navbar-wrapper {
   background-color: white;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
