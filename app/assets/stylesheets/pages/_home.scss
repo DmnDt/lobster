@@ -11,22 +11,6 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  background: #fff;
-  color: #999;
-}
-
-a {
-  text-decoration: none;
-  margin: 1rem 0;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.8125rem;
-  letter-spacing: 1px;
-}
-
 .description {
   font-size: 0.9rem;
   margin: 1rem 0;
@@ -37,20 +21,19 @@ section {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
-  padding: 30px;
+  padding: 0;
+  .description{
+    padding: 0 100px;
+    font-family: 'Nunito';
+    font-size: 25px;
+    font-weight: bold;
+    color: grey;
+  }
 }
 
 h1{
+  font-family: 'Urbanist', sans-serif;
   color: black;
-  margin-bottom: 70px;
-}
-
-h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #333;
-  font-size: 1.825rem;
-  margin: 1.3rem 0;
 }
 
 .services-grid {
@@ -61,6 +44,7 @@ h3 {
 }
 
 .service {
+  display: block !important;
   background: #fff;
   margin: 20px;
   padding: 20px;
@@ -77,11 +61,18 @@ h3 {
     line-height: 70px;
     text-align: left;
     color: black;
+    margin: 0;
+  }
+}
+
+.service2{
+  h4{
+    padding-top: 20px;
   }
 }
 
 .smart_money {
-  width: 100% !important;
+  width: 50% !important;
   background: #F9F9F9;
   margin: 20px;
   padding: 20px;
@@ -113,6 +104,37 @@ h3 {
     font-weight: thin;
     text-align: left;
   }
+  .button-home{
+    display: inline-block;
+    .btn{
+      padding: 8px 35px;
+      border-radius: 50px;
+      font-weight: lighter;
+      display: inline-block;
+      font-weight: 400;
+      color: black;
+      text-align: center;
+      vertical-align: middle;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      user-select: none;
+      border-color: #FF0082;
+    }
+    .btn-flat1{
+      background-color: #FF0082;
+      margin-right: 20px;
+      color: white;
+
+    }
+    .btn-ghost{
+      background-color: transparent;
+      color: #FF0082;
+    }
+    .btn:hover{
+      color: #fff;
+      background-color: #c9056a;
+      border-color: #c9056a;
+    }
+  }
 }
 
 .smart_invest{
@@ -120,125 +142,22 @@ h3 {
 }
 
 .smart_money_img {
-  background-image: asset-url("money.jpg");
-  background-size: cover;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 4px;
-  text-align: center;
-  -webkit-box-flex: 1;
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap;
-  border: 2px solid #e7e7e7;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  background-color: #F7F3F2;
-  height: 500px;
-  width: 800px;
-  font-weight: 600;
-  font-size: 1.3rem;
-  font-family: 'Montserrat', sans-serif;
+  img{
+    width:555px;
+  }
 }
 
-.smart_money_img1 {
-  background-image: asset-url("connect.jpg");
-  background-size: cover;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 4px;
-  text-align: center;
-  -webkit-box-flex: 1;
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap;
-  border: 2px solid #e7e7e7;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  background-color: #F7F3F2;
-  height: 500px;
-  width: 800px;
-  font-weight: 600;
-  font-size: 1.3rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.smart_money_img2 {
-  background-image: asset-url("interest.png");
-  background-size: cover;
-  background-position:center;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 4px;
-  text-align: center;
-  -webkit-box-flex: 1;
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap;
-  border: 2px solid #e7e7e7;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  background-color: #F7F3F2;
-  height: 500px;
-  width: 800px;
-  font-weight: 600;
-  font-size: 1.3rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.smart_money_img3 {
-  background-image: asset-url("audit.png");
-  background-size: cover;
-  background-position:center;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 4px;
-  text-align: center;
-  -webkit-box-flex: 1;
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap;
-  border: 2px solid #e7e7e7;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  background-color: #F7F3F2;
-  height: 500px;
-  width: 800px;
-  font-weight: 600;
-  font-size: 1.3rem;
-  font-family: 'Montserrat', sans-serif;
-}
-.smart_money_img4 {
-  background-image: asset-url("signature.png");
-  background-size: cover;
-  background-position:center;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 4px;
-  text-align: center;
-  -webkit-box-flex: 1;
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap;
-  border: 2px solid #e7e7e7;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  background-color: #F7F3F2;
-  height: 500px;
-  width: 800px;
-  font-weight: 600;
-  font-size: 1.3rem;
-  font-family: 'Montserrat', sans-serif;
-}
 
 .block1 {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 150px;
+}
+
+.user-journey{
+  h1{
+    margin-bottom: 100px !important;
+  }
 }
 
 hr {
@@ -249,15 +168,18 @@ hr {
 
 .block_investor {
     display: flex;
+    justify-content: space-between;
+    background-position: cover;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     align-items: center;
     text-align: left;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
 
-body {
-    font-family: 'Alegreya Sans', sans-serif;
-}
+
+
 
 /* Sticky footer position and size
 -------------------------------------------------- */
@@ -265,10 +187,7 @@ html {
   position: relative;
   min-height: 100%;
 }
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 300px;
-}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -279,9 +198,6 @@ body {
 
 /* Taller footer on small screens */
 @media (max-width: 567em) {
-    body {
-      margin-bottom: 700px;
-    }
     .footer {
       height: 260px;
     }
@@ -290,6 +206,7 @@ body {
 /* Newsletter
 -------------------------------------------------- */
 .newsletter{
+  margin-bottom: 80px;
   h1{
     margin-bottom: 30px;
   }
@@ -301,7 +218,7 @@ body {
   .btn-flat-red{
     color: white;
     font-family: 'Nunito';
-    font-size: 12px;
+    font-size: 13px;
     padding: 10px 40px;
     border-radius: 50px;
     border: none;
@@ -309,75 +226,24 @@ body {
     transition: background-color 0.3s ease;
     justify-content: space-around;
   }
+  .btn-flat-red:hover{
+      color: #fff;
+      background-color: #c9056a;
+      border-color: #c9056a;
+  }
   .Email{
     border: 1px solid #FA7F72;
     box-sizing: border-box;
     border-radius: 50px;
     font-family: 'Nunito', sans-serif;
     font-style: normal;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 27px;
     padding: 3px 33px;
     color: #FA7F72;
     margin-right: 10px;
+    // ::placeholder{
+    //   color: yellowgreen;
+    // }
   }
-}
-
-
-/* Sticky footer style and color
--------------------------------------------------- */
-.footer-lobster {
-  display: flex;
-  padding-top: 30px;
-  background-color: #F9F9F9;
-  color: #bbb;
-  background-position: cover;
-  margin: 30px;
-  padding: 30px;
-}
-
-.width-column{
-  margin-left: 20px;
-  width: 30%;
-}
-
-.first-column {
-  h5{
-    font-family: 'Urbanist';
-    text-align: left;
-  }
-  p{
-    text-align: left;
-  }
-  .nav{
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    padding: 0;
-    width: 33%;
-    img{
-      width:20px;
-    }
-  }
-}
-
-
-footer a {
-  color: #999;
-  text-decoration:none;
-}
-
-footer a:hover, footer a:focus {
-  color: #aaa;
-  text-decoration:none;
-  border-bottom:1px dotted #999;
-}
-
-footer .form-control {
-  background-color: #1f2022;
-  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
-  border: none;
-  resize: none;
-  color: #d1d2d2;
-  padding: 0.7em 1em;
 }
