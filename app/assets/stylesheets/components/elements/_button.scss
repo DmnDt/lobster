@@ -29,11 +29,15 @@
 }
 
   .btn-flat-green{
-  color: white;
-  padding: 8px 24px;
-  border-radius: 50px;
-  background: #A4F6A5;
-  transition: background-color 0.3s ease;
+    color: black;
+    font-size: 11px;
+    font-family: 'Nunito';
+    font-weight: bold;
+    padding: 5px 25px;
+    border-radius: 50px;
+    background: #A4F6A5;
+    transition: background-color 0.3s ease;
+    border: none;
 }
 
 .btn-flat-green:hover{

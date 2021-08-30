@@ -9,11 +9,9 @@
 @import "font-awesome";
 
 // Your CSS partials
-@import "components/index";
 @import "pages/index";
 @import "pages/dashboard";
+@import "pages/home";
 
 body { background-color:white }
 @import 'select2/dist/css/select2';
-
-

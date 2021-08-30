@@ -16,6 +16,7 @@
 
 .metriques-box{
   display: inline-flex;
+  color: black;
   background-color: white;
   margin-left: 40px;
   margin-right: 40px;
@@ -23,6 +24,10 @@
   margin-top: 50px;
   padding: 25px;
   border-radius: 70px;
+    h3{
+      font-family: 'Nunito';
+      font-weight: bold;
+    }
 }
 
 .metriques-investor{
@@ -50,6 +55,8 @@
   grid-gap: 16px;
 }
 
+
+
 .cards-category {
   font-family: 'Nunito';
   background-size: cover;
@@ -61,11 +68,14 @@
   color: black;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 20px;
   background-color: white;
   box-shadow: 0 0 15px rgba(48, 47, 47, 0.1);
   margin: 1em;
+}
+
+.cards-category:hover{
+  box-shadow: 0 0 15px rgba(255,163,114,.6);
 }
 
 .cards-icons{
@@ -90,11 +100,11 @@
   display: none;
   width: 100%;
   text-align: center;
-p{
-  font-family: 'Nunito';
-  font-size: 8px;
-  text-shadow: none;
-  margin: 0;
+  p{
+    font-family: 'Nunito';
+    font-size: 15px;
+    text-shadow: none;
+    margin: 0;
   }
 }
 
