@@ -1,33 +1,31 @@
 <div class="first-wrapper-index mx-2">
   <div class="second-wrapper-index mx-2">
+    <%= simple_form_for :search, url: projects_path, method: :get do |f| %>
+          <%= f.input :category, label: false, as: :select, collection: Project.pluck(:industry).uniq, input_html: { multiple: true, class: "select2 searchTerm", style: "" }, include_hidden: false %>
+          <button type="submit"  class="searchButton" ><%= f.submit :search %>
+          <i class="fa fa-search"></i>
+          </button>
+      <% end %>
     <div class="metriques">
-      <div class="metriques-box align-items-center justify-content-center">
+      <%# <div class="metriques-box align-items-center justify-content-center">
         <div class="metriques-investor align-items-center">
         <%# intégrer une colonne wallet %>
-          <h3> <strong>500,000 €</strong></h3>
+          <%# <h3> <strong>500,000 €</strong></h3>
           <p class="my-0">Dans votre portefeuille</p>
         </div>
         <div class="metriques-list">
-          <ul class="my-0">
+          <ul class="my-0"> %>
           <%# intégrer des colonnes investment,rendement, project_number, interests_sent %>
-            <li class="metriques-indiv"><strong>200,000 €</strong> déjà investis</li>
+            <%# <li class="metriques-indiv"><strong>200,000 €</strong> déjà investis</li>
             <li class="metriques-indiv"><strong>30,000 €</strong> de rendement</li>
             <li class="metriques-indiv"><strong>12</strong> projets déjà financés</li>
             <li class="metriques-indiv"><strong>10</strong> marques d’intérets acceptées</li>
           </ul>
         </div>
-      </div>
+      </div>%>
     </div>
-     <div class="container h-100">
-      <div class="d-flex justify-content-center h-100">
-          <%= simple_form_for :search, url: projects_path, method: :get do |f| %>
-            <div class="searchbar">
-              <%= f.input :category, label: false, as: :select, collection: Project.pluck(:industry).uniq, input_html: { multiple: true, class: "select2 search_input", style: "" }, include_hidden: false %>
-              <%= f.submit :search,:as => 'icons/magnifying-glass.png' %>
-            </div>
-          <% end %>
-      </div>
-    </div>
+    <%# <div class="wrap"> %>
+    <%# </div> %>
     <br><br>
     <div class="cards mx-1">
       <% @projects.each do |project| %>
