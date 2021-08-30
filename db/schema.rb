@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_30_085004) do
+ActiveRecord::Schema.define(version: 2021_08_30_095719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 2021_08_30_085004) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
+    t.string "domaine_activite"
+    t.integer "chiffre_affaires"
+    t.integer "taux_croissance_chiffre_affaires"
+    t.integer "marge_brute"
+    t.integer "taux_marge_brute"
+    t.integer "excedent_brut_exploitation"
+    t.integer "taux_marge_EBITDA"
+    t.jsonb "api_data"
     t.index ["user_id"], name: "index_investees_on_user_id"
   end
 
