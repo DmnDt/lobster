@@ -3,21 +3,18 @@
     <div>
       <div class="col-12 col-md-6 offset-lg-3">
         <div class="bg-white rounded p-3 mt-5 shadow">
-          <div class="form-inputs">
-          <%= f.input :SIRET %>
-          <%= f.input :company_name %>
-          <%= f.input :NAF %>
-          <%= f.input :address %>
-          <%= f.input :activity %>
-          <%= f.input :president %>
-          <%= f.input :managing_director %>
-          <%= f.input :shares %>
-          <%= f.input :table_cap %>
-          <%= f.input :turnover_n_2 %>
-          <%= f.input :turnover_n_1 %>
-          <%= f.input :turnover_n %>
-          <%= f.input :growth_n_2_n_1 %>
-          <%= f.input :growth_n_1_n %>
+          <div class="form-inputs" data-controller="fill">
+          <%= f.input :SIRET, input_html: { data: { action: 'keyup->fill#autocomplete' } } %>
+          <%= f.input :nom_entreprise, input_html: { data: { fill_target: "name" } } %>
+          <%= f.input :address, input_html: { data: { fill_target: "address" } } %>
+          <%= f.input :domaine_activite, input_html: { data: { fill_target: "activity" } } %>
+          <%= f.input :chiffre_affaires, input_html: { data: { fill_target: "chiffreAffaires" } }  %>
+          <%= f.input :taux_croissance_chiffre_affaires, input_html: { data: { fill_target: "croissanceChiffreAffaires" } }  %>
+          <%= f.input :marge_brute, input_html: { data: { fill_target: "margeBrute" } } %>
+          <%= f.input :taux_marge_brute, input_html: { data: { fill_target: "tauxMargeBrute" } } %>
+          <%= f.input :excedent_brut_exploitation, input_html: { data: { fill_target: "excedentBrutExploitation" } }  %>
+          <%= f.input :taux_marge_EBITDA, input_html: { data: { fill_target: "tauxMargeEbitda" } } %>
+          <%= f.input :api_data, label: false, input_html: { data: { fill_target: "apiData" }, class: 'd-none' } %>
           <%= f.button :submit, class: 'btn btn-primary' %>
            </div>
         </div>

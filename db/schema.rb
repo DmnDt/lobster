@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_25_163835) do
+ActiveRecord::Schema.define(version: 2021_08_30_100439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,22 +38,19 @@ ActiveRecord::Schema.define(version: 2021_08_25_163835) do
 
   create_table "investees", force: :cascade do |t|
     t.string "SIRET"
-    t.string "company_name"
-    t.string "NAF"
     t.string "address"
-    t.string "activity"
-    t.string "president"
-    t.string "managing_director"
-    t.integer "shares"
-    t.text "table_cap"
-    t.integer "turnover_n_2"
-    t.integer "turnover_n_1"
-    t.integer "turnover_n"
-    t.string "growth_n_2_n_1"
-    t.string "growth_n_1_n"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
+    t.string "domaine_activite"
+    t.integer "chiffre_affaires"
+    t.integer "taux_croissance_chiffre_affaires"
+    t.integer "marge_brute"
+    t.integer "taux_marge_brute"
+    t.integer "excedent_brut_exploitation"
+    t.integer "taux_marge_EBITDA"
+    t.jsonb "api_data"
+    t.string "nom_entreprise"
     t.index ["user_id"], name: "index_investees_on_user_id"
   end
 
