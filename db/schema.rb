@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_30_095719) do
+ActiveRecord::Schema.define(version: 2021_08_30_100439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2021_08_30_095719) do
     t.integer "excedent_brut_exploitation"
     t.integer "taux_marge_EBITDA"
     t.jsonb "api_data"
+    t.string "nom_entreprise"
     t.index ["user_id"], name: "index_investees_on_user_id"
   end
 
