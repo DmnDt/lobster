@@ -9,7 +9,7 @@ class InvesteesController < ApplicationController
     @user = current_user
     @investee.user = @user
 
-    if @investee.save!
+    if @investee.save
       redirect_to root_path
     else
       render :new
