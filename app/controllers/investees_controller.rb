@@ -19,6 +19,6 @@ class InvesteesController < ApplicationController
   private
 
   def investee_params
-    params.require(:investee).permit(:SIRET, :company_name, :NAF, :user_id, :address, :activity, :president, :managing_director, :shares, :table_cap, :turnover_n_2, :turnover_n_1, :turnover_n, :growth_n_2_n_1, :growth_n_1_n)
+    params.require(:investee).permit(:SIRET, :nom_entreprise, :domaine_activite, :user_id, :address, :chiffre_affaires, :taux_croissance_chiffre_affaires, :marge_brute, :taux_marge_brute, :excedent_brut_exploitation, :taux_marge_EBITDA, :api_data)
   end
 end

@@ -3,21 +3,17 @@
     <div>
       <div class="col-12 col-md-6 offset-lg-3">
         <div class="bg-white rounded p-3 mt-5 shadow">
-          <div class="form-inputs">
+          <div class="form-inputs" data-controller="fill">
           <%= f.input :SIRET %>
-          <%= f.input :company_name %>
-          <%= f.input :NAF %>
-          <%= f.input :address %>
-          <%= f.input :activity %>
-          <%= f.input :president %>
-          <%= f.input :managing_director %>
-          <%= f.input :shares %>
-          <%= f.input :table_cap %>
-          <%= f.input :turnover_n_2 %>
-          <%= f.input :turnover_n_1 %>
-          <%= f.input :turnover_n %>
-          <%= f.input :growth_n_2_n_1 %>
-          <%= f.input :growth_n_1_n %>
+          <%= f.input :nom_entreprise, data: { fill-target: "print_nom_entreprise" } %>
+          <%= f.input :address, data: { fill-target: "print_address" }  %>
+          <%= f.input :domaine_activite, data: { fill-target: "print_domaine_activite" }  %>
+          <%= f.input :chiffre_affaires, data: { fill-target: "print_chiffre_afaires" }  %>
+          <%= f.input :taux_croissance_chiffre_affaires, data: { fill-target: "print_croissance_chiffre_affaires" }  %>
+          <%= f.input :marge_brute, data: { fill-target: "print_marge_brut" }  %>
+          <%= f.input :taux_marge_brute, data: { fill-target: "print_taux_marge_brute" }  %>
+          <%= f.input :excedent_brut_exploitation, data: { fill-target: "print_excedent_brut_exploitation" }  %>
+          <%= f.input :taux_marge_EBITDA, data: { fill-target: "print_taux_marge_EBITDA" }  %>
           <%= f.button :submit, class: 'btn btn-primary' %>
            </div>
         </div>
