@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :investments, only: [:create]
     member do
       get "data_room"
+      get "test"
     end
   end
 end

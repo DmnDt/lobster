@@ -1,7 +1,7 @@
 <% @investments.each do |investment| %>
   <% if investment.status == 1 %>
     <ul>
-      <li><strong>Entreprise : </strong> <%=investment.project.investee.company_name %> </li>
+      <li><strong>Entreprise : </strong> <%=investment.project.investee.nom_entreprise %> </li>
       <li><strong>Projet : </strong> <%=investment.project.name %> </li>
       <li><strong>Montant : </strong> <%=investment.amount.round %> €</li>
       <li>

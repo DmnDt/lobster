@@ -36,9 +36,11 @@ class ProjectsController < ApplicationController
     @investment = Investment.new
     @project = Project.find(params[:id])
     @investor = Investor.find_by(user: current_user)
+    @investee = @project.investee
   end
 
   def data_room
+    @team_members = %w(Jean-Michel Jean-Claude Roberta) #generate array with API PAPPERS
     @project = Project.find(params[:id])
     @url_docusign = DocusignService.new(doc_user:current_user).get_url["url"]
 
