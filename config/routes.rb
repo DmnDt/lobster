@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
   resources :investees, only: [:create, :new]
   resources :investors, only: [:create, :new]
-  resources :projects, only: [:index, :show, :create, :new] do
+  resources :projects, only: [:index, :show, :create, :new, :update] do
     resources :investments, only: [:create]
     member do
       get "data_room"
