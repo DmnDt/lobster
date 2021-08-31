@@ -6,13 +6,21 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    @user = current_user
-    @project.user = @user
-    if @project.save!
+    @investee = Investee.find_by(user: current_user)
+    @project.investee = @investee
+    if @project.save
       redirect_to root_path
     else
       render :new
     end
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    params[:project][:documents].each do |document|
+      @project.documents.attach(document)
+    end
+    redirect_to data_room_project_path(@project)
   end
 
   def index
@@ -34,11 +42,14 @@ class ProjectsController < ApplicationController
   def data_room
     @team_members = %w(Jean-Michel Jean-Claude Roberta) #generate array with API PAPPERS
     @project = Project.find(params[:id])
+    @url_docusign = DocusignService.new(doc_user:current_user).get_url["url"]
+
   end
 
   private
 
   def project_params
-    params.require(:project).permit(:name, :valuation, :industry, :conversion_rate, :coupon, :conversion_date, :status, :total_amount, :financing_thesis, :investee_id, documents: [])
+    params.require(:project).permit(:name, :valuation, :industry, :conversion_rate,
+      :coupon, :conversion_date, :status, :total_amount, :financing_thesis, :investee_id, documents: [])
   end
 end
