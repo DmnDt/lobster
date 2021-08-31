@@ -1,0 +1,133 @@
+<div class="first-wrapper-show">
+  <div class="cover">
+    <div class="circle">
+      <%= image_tag 'Apple.png' %>
+    </div>
+    <img src="/assets/avatar/Dustin-17500327fdd7853a36763476de05ac8b0a617d30106e853881b69d1979d3804b.jpg" class="avatar-show avatar-bordered" />
+  </div>
+    <div class="company-infos">
+      <div class="profile-infos">
+        <h2>John Doe</h2> <%# remplacer avec investee.name %>
+        <p>Président</p> <%# remplacer avec investee.job %>
+        <ul class="cards-icons">
+          <li><%= image_tag 'social_network/001-facebook.png' %></li>
+          <li><%= image_tag 'social_network/002-twitter.png' %></li>
+          <li><%= image_tag 'social_network/010-linkedin.png' %></li>
+          <li><%= image_tag 'social_network/006-skype.png' %></li>
+        </ul>
+      </div>
+      <div class="tags">
+        <div class="title"><h3>Tags</h3></div>
+          <div class="buttons">
+            <button class="btn btn-flat-green">💸</button> <%# emoji à aligner ac le type de projet %>
+            <button class="btn btn-flat-green">🚀</button> <%# emoji à aligner ac le type de projet %>
+            <button class="btn btn-flat-blue">🤖</button> <%# emoji à aligner ac la catégorie d'entreprise %>
+            <button class="btn btn-flat-blue">🚗</button> <%# emoji à aligner ac la catégorie d'entreprise %>
+          </div>
+        </div>
+      <div class="management-team">
+        <div class="title"><h3>Management Team</h3></div>
+          <div class="avatar-team">
+            <%= image_tag 'avatar/Adrien.jpg', class:"avatar", alt:"avatar" %>
+            <%= image_tag 'avatar/Anne.jpg', class:"avatar", alt:"avatar" %>
+            <%= image_tag 'avatar/Fatima.jpg', class:"avatar", alt:"avatar" %>
+            <%= image_tag 'avatar/Oneal.jpg', class:"avatar", alt:"avatar" %>
+            <%= image_tag 'avatar/Bene.jpg', class:"avatar", alt:"avatar" %>
+            <%= image_tag 'avatar/Amandine.jpg', class:"avatar", alt:"avatar" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div>
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item nav-button">
+          <a class="nav-link" id="pills-communication-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false">Communication</a>
+        </li>
+        <li class="nav-item nav-button">
+          <a class="nav-link active" id="pills-projects-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="true">Projects Analytics</a>
+        </li>
+        <li class="nav-item nav-button">
+          <a class="nav-link" id="pills-company-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Company Analytics</a>
+        </li>
+      </ul>
+      <br>
+      <br>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div class="row">
+            <h3 class="title">Communications émises</h3>
+            <div class="wrapper-show">
+              <div class="column company">
+                <div class="card p-3">
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                      <div class="icon">
+                        <%= image_tag 'avatar/Dustin.jpg' %>
+                      </div>
+                      <div class="ms-2 c-details">
+                        <h6 class="mb-0">John Doe</h6> <span>3 days ago</span>
+                      </div>
+                    </div>
+                    <div class="badge"> <span>CEO</span> </div>
+                  </div>
+                  <div class="mt-5">
+                    <h3 class="heading">"Thanks to Germany opening, we'll expect to make x5 on revenue in 3 years"</h3>
+                    <div class="mt-5">
+                      <ul class="cards-icons">
+                        <li><%= image_tag 'icons/001-flash.png' %> <p>200</p></li>
+                        <li><%= image_tag 'icons/love-1617689.png' %> <p>200</p> </li>
+                        <li><%= image_tag 'icons/notification-1617680.png' %> <p>200</p></li>
+                        <li><%= image_tag 'icons/001-speech-bubble.png' %> <p>200</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <%# </div> %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h3 class="title">Communications reçues</h3>
+            <div class="wrapper-show">
+              <div class="column company">
+                <div class="card p-3">
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                      <div class="icon">
+                        <%= image_tag 'avatar/Harvey.jpg' %>
+                      </div>
+                      <div class="ms-2 c-details">
+                        <h6 class="mb-0">Harvey Specter</h6> <span>1 day ago</span>
+                      </div>
+                    </div>
+                    <div class="badge"> <span>🦞🦞🦞</span> </div>
+                  </div>
+                  <div class="mt-5">
+                    <h3 class="heading">"Incredible team whith strong delivery. Overachieving their objectives. Bluechip investment"</h3>
+                    <div class="mt-5">
+                      <ul class="cards-icons">
+                        <li><%= image_tag 'icons/001-flash.png' %> <p>200</p></li>
+                        <li><%= image_tag 'icons/love-1617689.png' %> <p>40</p> </li>
+                        <li><%= image_tag 'icons/notification-1617680.png' %> <p>104</p></li>
+                        <li><%= image_tag 'icons/001-speech-bubble.png' %> <p>20</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <div class="card-graph-project">
+            <%= line_chart({ "01/2021":1, "02/2021":2, "03/2021":3  }) %>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Company</div>
+      </div>
+    </div>
+  </div>
+</div>

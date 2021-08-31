@@ -1,36 +1,131 @@
-.card-data {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.wrapper-dataroom{
+  margin-top: 80px;
+  background-color: #F6F6F6;
+  padding: 15vh 15vh 30vh 15vh;
+}
+
+.header-table{
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin: 3%;
-  margin-right: 20%;
-  margin-left: 20%;
-  width: 50%;
+  height: 80px;
+  background-color: #FFA372;
+  padding: 0 220px;
+  img{
+    width: 35px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .circle{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h3{
+    font-family: 'Nunito';
+    font-weight: bolder;
+    font-size: 15px;
+    margin: 0;
+  }
 }
 
-.card-data img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+.body-table{
+  background-color: white;
+  padding: 52px 0 50px 70px;
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+.row{
+  display: flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.card-data p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+.column-dataroom{
+  width: 300px;
+  font-family: 'Nunito';
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  color: black;
+  border-radius: 20px;
+  background-color: white;
+  margin: 10px;
+  border: 1px solid rgb(228, 228, 228);
 }
 
-.card-data .card-product-infos {
-  padding: 16px;
+.names{
+  text-align: left;
+  a{
+    font-family: 'Nunito';
+    font-weight: bolder !important;
+    font-size: 15px;
+    margin: 50px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #FF0082 !important;
+    padding: 8px 35px;
+    border-radius: 50px;
+    border: 1px solid #FF0082;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    a:hover{
+    color: #fff;
+    font-weight: bolder !important;
+    background-color: #FF0082;
+    border-color: #FF0082;
+  }
+  .document-name{
+    padding: 20px 10px;
+  }
 }
+
+.actions{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 40%;
+}
+
+// .card-data {
+//   overflow: hidden;
+//   height: 120px;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   display: flex;
+//   align-items: center;
+//   margin: 3%;
+//   margin-right: 20%;
+//   margin-left: 20%;
+//   width: 50%;
+// }
+
+// .card-data img {
+//   height: 100%;
+//   width: 120px;
+//   object-fit: cover;
+// }
+
+// .card-product h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .card-data p {
+//   font-size: 12px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 0;
+//   margin-top: 8px;
+// }
+
+// .card-data .card-product-infos {
+//   padding: 16px;
+// }

@@ -44,3 +44,20 @@
   background: #A4F6A5;
   color: white;
 }
+
+.btn-flat-blue{
+  color: black;
+  font-size: 11px;
+  font-family: 'Nunito';
+  font-weight: bold;
+  padding: 5px 25px;
+  border-radius: 50px;
+  background: #3E00FF;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-flat-blue:hover{
+  background: #3E00FF;
+  color: white;
+}

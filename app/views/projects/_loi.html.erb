@@ -1,40 +1,43 @@
-<p>
-La Société:</p>
+<p>La Société:</p>
 <ul>
-<%# - <%= @investor.company} %>
-<li> <%= investor.capital %> </li>
-- #{@investor.address}
-- #{@investor.siret}
-- #{@investor.city}
+  <li> - <%= @investor.corporate_name %> </li>
+  <li> - <%= @investor.siret %> </li>
 </ul>
 
-Représenté par:
-- #{@investor.first_name}
-- #{@investor.last_name}
-- #{@investor.function}
+<p>Représenté par:</p>
+
+<ul>
+  <li> - <%= @investee.user.full_name %> </li>
+</ul>
+
 
 Ci-après appelé 'Investisseur'
 
-et
-La Société:
-# - #{@investee.company}
-# - #{@investee.capital}
-# - #{@investee.address}
-# - #{@investee.siret}
-# - #{@investee.city}
 
-Représenté par:
-# - #{@investee.first_name}
-# - #{@investee.last_name}
-# - #{@investee.function}
+et
+
+<p>La Société:</p>
+<ul>
+  <li> - <%= @investee.nom_entreprise %> </li>
+  <li> - <%= @investee.address %> </li>
+  <li> - <%= @investee.api_data&.dig("capital_formate") %> </li>
+  <li> - <%= @investee.api_data&.dig("siret_formate") %> </li>
+  <li> - <%= @investee.api_data&.dig("ville") %> </li>
+</ul>
+
+<p>Représenté par:</p>
+<ul>
+  <li> - <%= @investee.api_data&.dig("representants")&.first&.dig("prenom") %> </li>
+  <li> - <%= @investee.api_data&.dig("representants")&.first&.dig("nom") %> </li>
+  <li> - <%= @investee.api_data&.dig("representants")&.first&.dig("qualite") %> </li>
+</ul>
 
 <p>Ci-après appelé 'Demandeur'
 
-Nous nous engageons à respecter scrupuleusement la confidentialité la plus absolue en ce qui concerne les informations et les documents que le Demandeur est conduit à communiquer à l'Investisseur dans le cadre de l’exécution du contrat que nous avons signé le #{Date.today}.
+L'Investisseur s'engage à respecter scrupuleusement la confidentialité la plus absolue en ce qui concerne les informations et les documents que le Demandeur est conduit à communiquer à l'Investisseur dans le cadre de l’exécution du contrat que nous avons signé le</p> <%= Date.today %> <p>.
 
-Nous reconnaissons avoir été informés du fait que les informations relatives à la société [dénomination de la société concernée] ont une importance stratégique pour cette société et que toute diffusion de ces informations à des tiers pourrait lui causer un préjudice considérable et engagerait notre responsabilité.
+L'Investisseur reconnait avoir été informé du fait que les informations relatives à la société [dénomination de la société concernée] ont une importance stratégique pour cette société et que toute diffusion de ces informations à des tiers pourrait causer un préjudice considérable au Demandeur et engagerait la responsabilité de l'Investisseur.</p>
 
-Fait le <%= Date.today %> à #{@investee.city},
+<p>Fait le</p> <%= Date.today %> <p>à</p> <%= @investee.api_data&.dig("ville") %> <p>,</p>
 
-#{@investor.first_name}"
-</p>
+<%= current_user.full_name %>"
