@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @user = current_user
     @project.user = @user
-    if @project.save!
+    if @project.save
       redirect_to root_path
     else
       render :new
