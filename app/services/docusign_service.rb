@@ -1,7 +1,9 @@
 class DocusignService < DocusignRest::Client
 
-  def initialize
+  def initialize(doc_user:)
+    @doc_user = doc_user
     @client = DocusignRest::Client.new
+    # raise
   end
 
 
@@ -24,16 +26,16 @@ class DocusignService < DocusignRest::Client
       signers: [
         {
           embedded: true,
-          name: 'Investor',
-          email: 'investor@gmail.com',
+          name: @doc_user.full_name,
+          email: @doc_user.email,
           role_name: 'Investor'
         },
-        {
-          embedded: true,
-          name: 'tim',
-          email: 'someone+else@gmail.com',
-          role_name: 'Attorney'
-        }
+        # {
+        #   embedded: true,
+        #   name: 'tim',
+        #   email: 'someone+else@gmail.com',
+        #   role_name: 'Attorney'
+        # }
       ]
     )
   end
@@ -41,9 +43,17 @@ class DocusignService < DocusignRest::Client
   def get_url
     @client.get_recipient_view(
       envelope_id: get_envelope["envelopeId"],
-      name: "Investor",
-      email: "investor@gmail.com",
+      name: @doc_user.full_name,
+      email: @doc_user.email,
       return_url: 'http://google.com'
     )
+  end
+
+  def get_status
+    response = @client.get_envelope_recipients(
+    envelope_id: get_envelope["envelopeId"],
+    include_tabs: true,
+    include_extended: true
+  )
   end
 end
