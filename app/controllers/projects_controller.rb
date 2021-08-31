@@ -32,6 +32,8 @@ class ProjectsController < ApplicationController
 
   def data_room
     @project = Project.find(params[:id])
+    @url_docusign = DocusignService.new.get_url["url"]
+    # raise
   end
 
   private

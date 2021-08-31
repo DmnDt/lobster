@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => {:registrations => "registrations"}
   root to: 'pages#home'
   get "dashboard", to: "pages#dashboard"
+  get "docusign", to: "pages#docusign"
   resources :investments, only: [:index] do
     member do
       put "mark_as_ter"
