@@ -10,7 +10,9 @@ class PagesController < ApplicationController
       @pending_investments = Investment.where(investor: current_user.investor).pending
       @validated_investments = Investment.where(investor: current_user.investor).validated
     elsif current_user.investee.present? # Si user = investee
-      @investments = Investment.where(investee: current_user.investee)
+      @projects = Project.where(investee: current_user.investee)
+      # @investments = @projects.map{ |project| project.investments }.flatten
+      @investments= Investment.includes(:project).where(projects: {investee: current_user.investee})
     end
   end
 
