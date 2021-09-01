@@ -11,9 +11,9 @@ class PagesController < ApplicationController
     end
   end
 
-  def docusign
-    # render json: params.to_json
-    @url = DocusignService.new.get_url["url"]
-    raise
-  end
+  # def docusign
+  #   # render json: params.to_json
+  #   @url = DocusignService.new.get_url["url"]
+  #   raise
+  # end
 end
