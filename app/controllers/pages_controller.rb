@@ -7,7 +7,9 @@ class PagesController < ApplicationController
     if current_user.investor.present? # Si user = investor
       @investments = Investment.where(investor: current_user.investor)
     elsif current_user.investee.present? # Si user = investee
-      @investments = Investment.where(investee: current_user.investee)
+      @projects = Project.where(investee: current_user.investee)
+      # @investments = @projects.map{ |project| project.investments }.flatten
+      @investments= Investment.includes(:project).where(projects: {investee: current_user.investee})
     end
   end
 
