@@ -43,27 +43,12 @@
     </div>
   </div>
 </div>
-
-=======
-<h1>data room</h1>
-<div class="centered">
-  <% @project.documents.each do |document| %>
-    <div class="card-data">
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2072&q=80" />
-      <div class="card-product-infos">
-        <%#= cl_image_tag(document.key, width: 400, height: 300, crop: :fill) %>
-        <h2><%= link_to document.filename, cl_image_path(document.key, format: :pdf), target:"_blank" %></h2>
-        <%# <p>Product description with <strong>relevant info</strong> only.</p> %>
-      </div>
-    </div>
-  <% end %>
   <% if (current_user == @project.investee.user )%>
     <%= simple_form_for(@project) do |f| %>
       <%= f.input :documents, as: :file, input_html: { multiple: true } %>
       <%= f.button :submit, "Submit" %>
     <% end %>
   <% end %>
-</div>
+
 
 <%# <%= link_to("docusign", "https://account-d.docusign.com/oauth/auth?response_type=code&scope=extended signature&client_id=fc842549-d8a1-4b60-bec7-713bda28349b&redirect_uri=http://localhost:3000/docusign")%>
-<%= link_to "signature", "#{@url_docusign}"%>
