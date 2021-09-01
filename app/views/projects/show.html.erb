@@ -123,7 +123,7 @@
         </div>
         <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
           <div class="sign">
-          <% if current_user&.investee.present? %>
+          <% if current_user&.investor.present? %>
             <%= render 'components/project_show/NDA' %>
             <% end %>
           </div>
