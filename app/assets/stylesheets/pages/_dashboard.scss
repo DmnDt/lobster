@@ -1,16 +1,64 @@
-.dashboard {
-  background-color: white;
-  margin-top: 3rem;
+
+.wrapper-container{
   padding-top: 2rem;
   border-radius: 20px;
   padding-bottom: 2rem;
   font-family: "Work Sans", "Helvetica", "sans-serif";
+  margin-top: 80px;
+  background-color: #F6F6F6;
+  padding: 15vh 15vh 30vh 15vh;
+  .row{
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+  }
+  .col-4{
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
+    max-width: none;
+    min-height: 100px;
+    h1{
+      font-size: 30px;
+      text-align: center;
+    }
+  }
 }
 
-// .nav-link.active {
-//   background-color: #FA7F72 !important;
-// }
 
-h5 {
 
+
+.dashboard .row .col-4{
+  .names {
+    width: 100%;
+    .line-project .index{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px;
+    }
+    .project{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .button{
+      margin: 0;
+      padding: 0px 8px;
+      justify-content: center;
+      font-size: 27px;
+      border: none !important;
+    }
+    .team-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    }
+  }
 }

@@ -1,14 +1,54 @@
-<div class="container dashboard">
-  <div class="menu-navbar" id="menu-navbar">
-    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><h5>Interêt déclaré</h5></a>
-      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><h5>Pending</h5></a>
-      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><h5>Validé</h5></a>
+<div class="wrapper-container dashboard">
+  <div class="row">
+    <div class="col-4">
+      <h1>Intérêts ❤️</h1>
+      <% @interested_investments.each do | investment | %>
+        <div class="names">
+          <div class="line-project">
+            <div class="index">
+              <ul class="project">
+                <li><strong>Projet : </strong> <%=investment.project.name %> </li>
+              </ul>
+              <%= link_to "🤓", data_room_project_path(investment.project), class:"button" %>
+              <div class="team-icons"><%= image_tag 'icons/love-1617689.png' %> <p>20</p> </li></div>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><%= render "my_investments" %></div>
-      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"><%= render "loi_inv" %></div>
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"><%= render "signed" %></div>
+    <div class="col-4">
+      <h1>En process ⚡️</h1>
+      <% @pending_investments.each do | investement | %>
+        <div class="names">
+          <div class="line-project">
+            <div class="index">
+              <ul class="project">
+                <li><strong>Projet : </strong> <%=investment.project.name %> </li>
+              </ul>
+              <%= link_to "🤓", data_room_project_path(investment.project), class:"button" %>
+              <div class="team-icons"><%= image_tag 'icons/001-flash.png' %> <p>20</p> </li></div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-4">
+      <h1>Terminé 🔥</h1>
+      <% @validated_investments.each do | investment | %>
+      <div class="names">
+          <div class="line-project">
+            <div class="index">
+              <ul class="project">
+                <li><strong>Projet : </strong> <%=investment.project.name %> </li>
+              </ul>
+              <%= link_to "🤓", data_room_project_path(investment.project), class:"button" %>
+              <div class="team-icons"><%= image_tag '002-fire.png' %> <p>20</p> </li></div>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
-</div>
+<br>
+<br>
+<br>
