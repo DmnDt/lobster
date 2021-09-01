@@ -1,5 +1,6 @@
 <div class="first-wrapper-index mx-2">
   <div class="second-wrapper-index mx-2">
+    <h1 class='index-title'>Nos <span>Projets</span></h1>
     <%= simple_form_for :search, url: projects_path, method: :get do |f| %>
           <%= f.input :category, label: false, as: :select, collection: Project.pluck(:industry).uniq, input_html: { multiple: true, class: "select2 searchTerm", style: "" }, include_hidden: false %>
           <button type="submit"  class="searchButton" ><%= f.submit :search %>
@@ -31,7 +32,7 @@
       <% @projects.each do |project| %>
         <div class="cards-category d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image_tag 'Apple.png' ">
           <%# <div class="cards-logo"><%#= cl_image_tag project.investee.user.photo.key, style: 'width: 50px' %><%#</div> %>
-          <div class="cards-logo"><%= cl_image_tag project.user.photo.key, style: 'width: 50px' %></div>
+          <div class="cards-logo"><%= cl_image_tag project.user.photo.key, style: 'height: 100px; object-fit: contain; object-position: center; width: 100px' %></div>
             <h3 class="title py-2 m-0"><%= project.investee.nom_entreprise %></h3>
             <ul class="cards-icons">
               <li><%= image_tag 'icons/001-flash.png' %> <p>200</p></li>
