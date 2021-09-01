@@ -3,7 +3,7 @@
     <div>
       <div class="col-12 col-md-6 offset-lg-3">
         <div class="bg-white rounded p-3 mt-5 shadow">
-          <div class="form-inputs" data-controller="fill">
+          <div class="form-inputs inv-new" data-controller="fill">
           <%= f.input :SIRET, input_html: { data: { action: 'keyup->fill#autocomplete' } } %>
           <%= f.input :nom_entreprise, input_html: { data: { fill_target: "name" } } %>
           <%= f.input :address, input_html: { data: { fill_target: "address" } } %>

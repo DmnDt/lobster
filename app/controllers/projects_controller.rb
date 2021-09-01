@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
     @investee = Investee.find_by(user: current_user)
     @project.investee = @investee
     if @project.save
-      redirect_to root_path
+      redirect_to projects_path
     else
       render :new
     end
