@@ -43,6 +43,7 @@
     </div>
   </div>
 </div>
+
   <% if (current_user == @project.investee.user )%>
     <%= simple_form_for(@project) do |f| %>
       <%= f.input :documents, as: :file, input_html: { multiple: true } %>
@@ -52,3 +53,4 @@
 
 
 <%# <%= link_to("docusign", "https://account-d.docusign.com/oauth/auth?response_type=code&scope=extended signature&client_id=fc842549-d8a1-4b60-bec7-713bda28349b&redirect_uri=http://localhost:3000/docusign")%>
+
