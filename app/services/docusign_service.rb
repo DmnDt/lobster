@@ -49,11 +49,11 @@ class DocusignService < DocusignRest::Client
     )
   end
 
-  def get_status
-    response = @client.get_envelope_recipients(
-    envelope_id: get_envelope["envelopeId"],
-    include_tabs: true,
-    include_extended: true
-  )
-  end
+  # def get_status
+  #   response = @client.get_envelope_recipients(
+  #   envelope_id: get_envelope["envelopeId"],
+  #   include_tabs: true,
+  #   include_extended: true
+  # )
+  # end
 end
