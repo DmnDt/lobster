@@ -1,7 +1,7 @@
 <p>La Société:</p>
 <ul>
-  <li> - <%= @investor.corporate_name %> </li>
-  <li> - <%= @investor.siret %> </li>
+  <li> - Hello<%#= @investor.corporate_name %> </li>
+  <li> - <%#= @investor.siret %> </li>
 </ul>
 
 <p>Représenté par:</p>
@@ -18,18 +18,18 @@ et
 
 <p>La Société:</p>
 <ul>
-  <li> - <%= @investee.nom_entreprise %> </li>
-  <li> - <%= @investee.address %> </li>
-  <li> - <%= @investee.api_data&.dig("capital_formate") %> </li>
-  <li> - <%= @investee.api_data&.dig("siret_formate") %> </li>
-  <li> - <%= @investee.api_data&.dig("ville") %> </li>
+  <li> - <%#= @investee.nom_entreprise %> </li>
+  <li> - <%#= @investee.address %> </li>
+  <li> - <%#= @investee.api_data&.dig("capital_formate") %> </li>
+  <li> - <%#= @investee.api_data&.dig("siret_formate") %> </li>
+  <li> - <%#= @investee.api_data&.dig("ville") %> </li>
 </ul>
 
 <p>Représenté par:</p>
 <ul>
-  <li> - <%= @investee.api_data&.dig("representants")&.first&.dig("prenom") %> </li>
-  <li> - <%= @investee.api_data&.dig("representants")&.first&.dig("nom") %> </li>
-  <li> - <%= @investee.api_data&.dig("representants")&.first&.dig("qualite") %> </li>
+  <li> - <%#= @investee.api_data&.dig("representants")&.first&.dig("prenom") %> </li>
+  <li> - <%#= @investee.api_data&.dig("representants")&.first&.dig("nom") %> </li>
+  <li> - <%#= @investee.api_data&.dig("representants")&.first&.dig("qualite") %> </li>
 </ul>
 
 <p>Ci-après appelé 'Demandeur'
@@ -38,6 +38,6 @@ L'Investisseur s'engage à respecter scrupuleusement la confidentialité la plus
 
 L'Investisseur reconnait avoir été informé du fait que les informations relatives à la société [dénomination de la société concernée] ont une importance stratégique pour cette société et que toute diffusion de ces informations à des tiers pourrait causer un préjudice considérable au Demandeur et engagerait la responsabilité de l'Investisseur.</p>
 
-<p>Fait le</p> <%= Date.today %> <p>à</p> <%= @investee.api_data&.dig("ville") %> <p>,</p>
+<p>Fait le</p> <%#= Date.today %> <p>à</p> <%#= @investee.api_data&.dig("ville") %> <p>,</p>
 
 <%= current_user.full_name %>"

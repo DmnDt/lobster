@@ -9,8 +9,11 @@
         <% else %>
           <div class="px-4"><%= link_to (image_tag "Logo.png", style: 'width: 80px'), root_path %></div>
         <% end %>
-        <div class="px-4 border-left "><%= link_to "Investisseur", projects_path(@investor) %></div>
-        <div class="px-4"><%= link_to "Demandeur", new_investee_path(@investee) %></div>
+        <div class="px-4 border-left "><%= link_to "Projets", projects_path %></div>
+        <div class="px-4 border-left "><%= link_to "Dashboard", dashboard_path %></div>
+        <% if current_user&.investee.present? %>
+          <div class="px-4"><%= link_to "Créer un Projet", new_project_path %></div>
+        <% end %>
       </div>
       <div class="profil">
         <%= image_tag "icons/user-1617653.png", style: 'width: 40px', class: "avatar dropdown-toggle", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" }, id: "navbarDropdown" %>
