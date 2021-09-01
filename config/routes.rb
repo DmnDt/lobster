@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     member do
       get "data_room"
       get "test"
+      get "end_investor"
     end
   end
 end
