@@ -1,14 +1,14 @@
 <p>La Société:</p>
 <ul>
-  <li> - Hello<%#= @investor.corporate_name %> </li>
-  <li> - <%#= @investor.siret %> </li>
+  <li> - DD Capital </li>
+  <li> - SIRET: 50071592401057</li>
 </ul>
 
-<p>Représenté par:</p>
+<%# <p>Représenté par:</p>
 
 <ul>
-  <li> - <%= @investee.user.full_name %> </li>
-</ul>
+  <li> - Damien Douat </li>
+</ul> %>
 
 
 Ci-après appelé 'Investisseur'
@@ -18,26 +18,21 @@ et
 
 <p>La Société:</p>
 <ul>
-  <li> - <%#= @investee.nom_entreprise %> </li>
-  <li> - <%#= @investee.address %> </li>
-  <li> - <%#= @investee.api_data&.dig("capital_formate") %> </li>
-  <li> - <%#= @investee.api_data&.dig("siret_formate") %> </li>
-  <li> - <%#= @investee.api_data&.dig("ville") %> </li>
+  <li> - POLYFLAME EUROPE</li>
+  <li> - SIRET: 40071593400057 </li>
+  <li> - Capital social: 8 673 194 € </li>
 </ul>
 
 <p>Représenté par:</p>
 <ul>
-  <li> - <%#= @investee.api_data&.dig("representants")&.first&.dig("prenom") %> </li>
-  <li> - <%#= @investee.api_data&.dig("representants")&.first&.dig("nom") %> </li>
-  <li> - <%#= @investee.api_data&.dig("representants")&.first&.dig("qualite") %> </li>
+  <li> - Damien DOUAT </li>
+
 </ul>
 
 <p>Ci-après appelé 'Demandeur'
 
-L'Investisseur s'engage à respecter scrupuleusement la confidentialité la plus absolue en ce qui concerne les informations et les documents que le Demandeur est conduit à communiquer à l'Investisseur dans le cadre de l’exécution du contrat que nous avons signé le</p> <%= Date.today %> <p>.
+L'Investisseur s'engage à respecter scrupuleusement la confidentialité la plus absolue en ce qui concerne les informations et les documents que le Demandeur est conduit à communiquer à l'Investisseur dans le cadre de l’exécution du contrat que nous avons signé le 03/09/2021 <p>.
 
-L'Investisseur reconnait avoir été informé du fait que les informations relatives à la société [dénomination de la société concernée] ont une importance stratégique pour cette société et que toute diffusion de ces informations à des tiers pourrait causer un préjudice considérable au Demandeur et engagerait la responsabilité de l'Investisseur.</p>
+L'Investisseur reconnait avoir été informé du fait que les informations relatives à la société POLYFLAME EUROPE ont une importance stratégique pour cette société et que toute diffusion de ces informations à des tiers pourrait causer un préjudice considérable au Demandeur et engagerait la responsabilité de l'Investisseur.</p>
 
-<p>Fait le</p> <%#= Date.today %> <p>à</p> <%#= @investee.api_data&.dig("ville") %> <p>,</p>
-
-<%= current_user.full_name %>"
+<p>Fait le</p> 03/09/2021 <p>à</p> Paris <p></p>
