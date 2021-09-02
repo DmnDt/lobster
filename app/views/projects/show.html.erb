@@ -59,7 +59,7 @@
         <br>
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            <div class="row">
+            <div class="row-grid">
               <h3 class="title">Communications émises</h3>
               <div class="wrapper-show">
                 <div class="column company">
@@ -79,10 +79,9 @@
                       <h3 class="heading">"Thanks to Germany opening, we'll expect to make x5 on revenue in 3 years"</h3>
                       <div class="mt-5">
                         <ul class="cards-icons">
-                          <li><%= image_tag 'icons/001-flash.png' %> <p>200</p></li>
-                          <li><%= image_tag 'icons/love-1617689.png' %> <p>200</p> </li>
-                          <li><%= image_tag 'icons/notification-1617680.png' %> <p>200</p></li>
-                          <li><%= image_tag 'icons/001-speech-bubble.png' %> <p>200</p></li>
+                          <li><h6 class="icon">❤️</h6>  <p style="font-weight:bolder"><%= rand(0..10) %></p> </li>
+                          <li><h6 class="icon">⚡️</h6> <p style="font-weight:bolder"><%= rand(0..10) %></p> </li>
+                          <li><h6 class="icon">🔥</h6> <p style="font-weight:bolder"><%= rand(0..10) %></p> </li>
                         </ul>
                       </div>
                     </div>
@@ -91,7 +90,7 @@
                 </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row-grid">
               <h3 class="title">Communications reçues</h3>
               <div class="wrapper-show">
                 <div class="column company">
@@ -111,10 +110,9 @@
                       <h3 class="heading">"Incredible team whith strong delivery. Overachieving their objectives. Bluechip investment"</h3>
                       <div class="mt-5">
                         <ul class="cards-icons">
-                          <li><%= image_tag 'icons/001-flash.png' %> <p>200</p></li>
-                          <li><%= image_tag 'icons/love-1617689.png' %> <p>40</p> </li>
-                          <li><%= image_tag 'icons/notification-1617680.png' %> <p>104</p></li>
-                          <li><%= image_tag 'icons/001-speech-bubble.png' %> <p>20</p></li>
+                          <li><h6 class="icon">❤️</h6>  <p style="font-weight:bolder"><%= rand(0..10) %></p> </li>
+                          <li><h6 class="icon">⚡️</h6> <p style="font-weight:bolder"><%= rand(0..10) %></p> </li>
+                          <li><h6 class="icon">🔥</h6> <p style="font-weight:bolder"><%= rand(0..10) %></p> </li>
                         </ul>
                       </div>
                     </div>
@@ -140,7 +138,7 @@
         </div>
       </div>
       <% if current_user&.investor.present? %>
-        <div class="col-4">
+        <div class="col-4 invest">
           <%= render 'components/project_show/NDA' %>
         </div>
       <% end %>
