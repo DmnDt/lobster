@@ -7,12 +7,23 @@
       <button class="chrono">24j 12h 23min 🚨 </button>
       <li><button>Nouveau document 📑</button></li>
       <li><%= link_to "Signer ✍️", "#{@url_docusign}", target:"_blank"%></li>
+      <% if (current_user == @project.investee.user )%>
+        <li>
+          <div class="upload" data-controller="upload-documents">
+            <button class="btn-dataroom" data-action="click->upload-documents#select">Ajouter des fichiers</button>
+            <%= simple_form_for @project, html: { class: "d-none", data: { upload_documents_target: "form" } } do |f| %>
+              <%= f.input :documents, as: :file, label: false, input_html: { multiple: true, data: { action: "change->upload-documents#change", upload_documents_target: "input" } } %>
+              <%= f.button :submit, "Valider" %>
+            <% end %>
+          </div>
+        </li>
+      <% end %>
     </div>
   </div>
   <div class="header-table">
-      <%# <div class="circle"> %>
+      <div class="circle">
         <%= cl_image_tag @project.user.photo.key %>
-      <%# </div> %>
+      </div>
       <h3>Documents</h3>
       <h3>Actions</h3>
   </div>
@@ -46,12 +57,6 @@
   </div>
 </div>
 
-          <% if (current_user == @project.investee.user )%>
-            <%= simple_form_for(@project) do |f| %>
-              <%= f.input :documents, as: :file, label: false, input_html: { multiple: true, class: "btn btn-flat1" } %>
-              <%= f.button :submit, "Valider", class: "btn btn-flat1" %>
-            <% end %>
-          <% end %>
 
 
 <%# <%= link_to("docusign", "https://account-d.docusign.com/oauth/auth?response_type=code&scope=extended signature&client_id=fc842549-d8a1-4b60-bec7-713bda28349b&redirect_uri=http://localhost:3000/docusign")%>
