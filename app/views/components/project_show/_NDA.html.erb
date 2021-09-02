@@ -1,12 +1,12 @@
 <!-- Formulaire investment -->
 <div class="sign">
   <%= simple_form_for @investment, url: project_investments_path(@project) do |f| %>
-  <%= f.input :amount, label:"Je veux investir 🚀🚀", placeholder:"20,000€" , input_html: {class: "w-100"}, wrapper_html: {class: "w-100 pr-3"} %>
+  <%= f.input :amount, label:"Je veux investir", placeholder:"20,000€" , input_html: {class: "w-100"}, wrapper_html: {class: "w-100 pr-3"} %>
   <% end %>
 
   <!-- Button trigger modal -->
-  <button type="button" class="btn-flat-red" data-toggle="modal" data-target="#exampleModalLong">
-  Go !
+  <button type="button" class="btn btn-flat1 button-invest" data-toggle="modal" data-target="#exampleModalLong">
+    🚀
   </button>
 </div>
 

@@ -72,8 +72,9 @@ a:link {
 }
 
 
-.row{
-  display: grid !important;
+
+.line{
+  display: grid;
   align-items: flex-start;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
