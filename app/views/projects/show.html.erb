@@ -5,7 +5,6 @@
     <div class="circle">
       <%= cl_image_tag @project.user.photo.key %>
     </div>
-    <img src="/assets/avatar/Dustin-17500327fdd7853a36763476de05ac8b0a617d30106e853881b69d1979d3804b.jpg" class="avatar-show avatar-bordered" />
   </div>
     <div class="company-infos">
       <div class="profile-infos">
@@ -56,7 +55,7 @@
           </li>
           <% if (current_user == @project.investee.user )%>
             <li class="nav-item nav-button">
-              <a> <%= link_to "Dataroom", data_room_project_path(@project), class:"btn btn-flat1" %></a>
+              <%= link_to "Dataroom", data_room_project_path(@project), class:"btn btn-flat1 nav-button" %>
             </li>
           <% end %>
         </ul>
