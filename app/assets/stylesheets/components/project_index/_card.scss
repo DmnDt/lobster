@@ -10,11 +10,26 @@
   padding: 15vh 15vh 30vh 15vh;
 }
 
-.metriques{
-  padding-top: 20px;
-  padding-bottom: 20px;
+.metriques-index{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  border-radius: 40px;
+  margin: 30px auto !important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 60%;
+  p{
+    margin:0;
+    font-weight: bolder;
+    font-size:15px;
+  }
+  .icon{
+    font-size: x-large;
+    align-items: center;
+    margin: 0;
+  }
 }
 
 .metriques-box{
@@ -79,6 +94,8 @@
 
 .cards-category:hover{
   box-shadow: 0 0 15px rgba(255,163,114,.6);
+  transform: scale(1.08);
+  transition: all 0.5s ease;
 }
 
 .cards-icons{
@@ -105,9 +122,10 @@
   text-align: center;
   p{
     font-family: 'Nunito';
-    font-size: 15px;
+    font-size: 20px;
     text-shadow: none;
     margin: 0;
+    font-weight: bolder;
   }
 }
 

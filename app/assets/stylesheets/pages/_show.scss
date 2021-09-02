@@ -1,0 +1,177 @@
+.first-wrapper-show {
+  .cover{
+    height: 400px;
+    width: 100%;
+    margin-top: 80px;
+    background-image: url('profile/Banner-Profilebanner-profile.png');
+    background-size: cover;
+    background-position: center;
+    // overflow: hidden;
+    // background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+
+    .circle {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(255,163,114,.6);
+      background: white;
+      border: 1px solid rgb(215, 215, 215);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    .avatar-show {
+      position: absolute;
+      left: 40px;
+      bottom: -120px;
+      width: 150px;
+      height: 150px;
+      object-fit: cover !important;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    p {
+      font-size: 12px;
+      opacity: .7;
+      margin: 0;
+    }
+  }
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.company-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: top;
+  .buttons{
+    display: flex;
+  }
+  h2 {
+    margin: 0;
+    font-family: 'Nunito';
+    font-weight: bolder;
+  }
+  p{
+    margin: 0;
+  }
+  h3{
+    margin-top: 10px;
+    font-weight: bolder;
+  }
+}
+
+.cards-icons{
+  img{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  p{
+    font-family: 'Nunito';
+    font-size: 10px;
+    text-shadow: none;
+    margin: 0;
+  }
+}
+
+.btn{
+  padding: 2px 15px;
+  margin-right: 7px;
+  margin-top: 10px;
+}
+
+.management-team{
+  .avatar-team{
+    margin-left: 20px;
+    .avatar{
+      margin-left: -20px;
+      width: 50px;
+      height: 50px;
+      object-fit: cover !important;
+    }
+  }
+}
+
+.nav-pills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .nav-button{
+    color: white;
+    font-size: 15px;
+    font-family: 'Nunito';
+    font-weight: bold;
+    padding: 11px 25px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    border: none;
+    margin-right: 10px;
+  }
+  #pills-communication-tab{
+    border-radius: 30px;
+    background: #CC35F1;
+  }
+  #pills-communication-tab:hover{
+    background: #952ab0;
+    color: #fff;
+  }
+   #pills-projects-tab{
+    border-radius: 30px;
+    background: #A4F6A5;
+  }
+  #pills-projects-tab:hover{
+    background: #6fba70;
+    color: #fff;
+  }
+  #pills-company-tab{
+    border-radius: 30px;
+    background:  #3E00FF;
+  }
+  #pills-company-tab:hover{
+    background: #2e00b8;
+    color: #fff;
+  }
+}
+
+.row{
+  .title{
+    font-weight: bolder;
+    margin: 0 0 30px 50px !important;
+  }
+}
+
+.card-graph-projects{
+  .chart{
+    width: 400px;
+  }
+}
+
+#pills-profile{
+  .sign{
+    width: 500px;
+    margin: 40px auto;
+    background-color: #F6F6F6;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+  }
+}

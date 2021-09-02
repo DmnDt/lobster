@@ -1,13 +1,22 @@
 <div class="first-wrapper-index mx-2">
   <div class="second-wrapper-index mx-2">
-    <h1 class='index-title'>Nos <span>Projets</span></h1>
+    <h1 class='index-title'>Les <span>Projets</span></h1>
     <%= simple_form_for :search, url: projects_path, method: :get do |f| %>
           <%= f.input :category, label: false, as: :select, collection: Project.pluck(:industry).uniq, input_html: { multiple: true, class: "select2 searchTerm", style: "" }, include_hidden: false %>
           <button type="submit"  class="searchButton" ><%= f.submit :search %>
           <i class="fa fa-search"></i>
           </button>
       <% end %>
-    <div class="metriques">
+      <br>
+    <div class="metriques-index">
+      <h6 class="icon"> ❤️</h6>
+      <p>Intéressé - Etape 1</p>
+      <p>●</p>
+      <h6 class="icon">⚡️</h6>
+      <p>En cours - Etape 2</p>
+      <p>●</p>
+      <h6 class="icon">🔥</h6>
+      <p>Investissement Validé - Etape 3</p>
       <%# <div class="metriques-box align-items-center justify-content-center">
         <div class="metriques-investor align-items-center">
         <%# intégrer une colonne wallet %>
@@ -27,7 +36,7 @@
     </div>
     <%# <div class="wrap"> %>
     <%# </div> %>
-    <br><br>
+    <br>
     <div class="cards mx-1">
       <% @projects.each do |project| %>
         <div class="cards-category d-flex flex-column" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image_tag 'Apple.png' ">
@@ -35,13 +44,12 @@
           <div class="cards-logo"><%= cl_image_tag project.user.photo.key, style: 'height: 100px; object-fit: contain; object-position: center; width: 100px' %></div>
             <h3 class="title py-2 m-0"><%= project.investee.nom_entreprise %></h3>
             <ul class="cards-icons">
-              <li><%= image_tag 'icons/001-flash.png' %> <p>200</p></li>
-              <li><%= image_tag 'icons/love-1617689.png' %> <p>200</p> </li>
-              <li><%= image_tag 'icons/notification-1617680.png' %> <p>200</p></li>
-              <li><%= image_tag 'icons/001-speech-bubble.png' %> <p>200</p></li>
+              <li><h6 class="icon">❤️</h6>  <p style="font-weight:bolder"><%= rand(0..1000) %></p> </li>
+              <li><h6 class="icon">⚡️</h6> <p style="font-weight:bolder"><%= rand(0..1000) %></p> </li>
+              <li><h6 class="icon">🔥</h6> <p style="font-weight:bolder"><%= rand(0..1000) %></p> </li>
             </ul>
           <div id="statistics" class="statistics">
-            <p>From bottom to over the top 🚀</p>
+            <p class="amount"> <%= number_with_delimiter(project.total_amount, delimiter: " ")%> € </p>
             <%= link_to 'Projet', project_path(project), class: 'btn-flat-green' %>
           </div>
         </div>

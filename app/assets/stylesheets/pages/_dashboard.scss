@@ -4,9 +4,21 @@
   border-radius: 20px;
   padding-bottom: 2rem;
   font-family: "Work Sans", "Helvetica", "sans-serif";
-  margin-top: 80px;
+  margin-top: 50px;
   background-color: #F6F6F6;
   padding: 15vh 15vh 30vh 15vh;
+  .elements{
+  margin-bottom: 20px;
+    h1{
+      font-family: 'Rampart One';
+      font-size: 50px;
+      color: #FFA372;
+      margin-right: 50px;
+      span{
+        color: #FA7F72;
+      }
+    }
+  }
   .row{
     display: grid;
     align-items: flex-start;
