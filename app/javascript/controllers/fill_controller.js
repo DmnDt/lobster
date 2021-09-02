@@ -39,9 +39,14 @@ export default class extends Controller {
     }
   }
 
+  vanishIn() {
+    const selector = document.querySelector('.row')
+    selector.classList.add('magictime', 'vanishIn')
+  }
+
   async updateForm() {
     const siret = this.inputSearchTarget.value;
-    //animation
+    this.vanishIn();//animation
     await this.fetchApi(siret);
     this.newFormTarget.classList.remove("hidden");
     this.containerSearchTarget.classList.add("hidden");
