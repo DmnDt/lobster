@@ -1,53 +1,38 @@
-
-<div class="wrapper-show">
-  <div class="column company">
-    <div class="module management" id="company-first">
-      <h2> TEAM </h2>
-      <div class="team-cards">
-        <%# <% @team_members.each do | team_member| %> %>
-          <%# <%= render 'components/project_show/team_member' %> %>
-        <%# <% end %> %>
+<div class="wrapper-api dashboard">
+  <div class="elements-api">
+    <h1>C'est bien votre société ? 🧐</h1>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <h2>Les infos générales 📚</h2>
+      <div class="data">
+        <p> Startup Inc. </p>
+        <p>2 rue de la Paix, 75001 Paris </p>
+        <p>Vente de produits informatiques</p>
       </div>
     </div>
-    <div class="module" id="company-second">
-    <div class="operation wrapper-card">
-        <%# <%= render 'components/project_show/operation' %> %>
+    <div class="col-4 figures">
+      <h2>Les finances 💸</h2>
+      <div class="data">
+        <div class="fin"><h5>CA</h5> <p> 3,000,000,000 € </p></div>
+        <div class="fin"><h5>%</h5> <p> 50% </p></div>
+        <div class="fin"><h5>EBE</h5> <p> 600,0000 € </p></div>
+        <div class="fin"><h5>%</h5> <p> 50% </p></div>
       </div>
     </div>
-    <div class="module" id="company-third">
-      <div class="operation wrapper-card">
-        <%# <%= render 'components/project_show/traction' %> %>
+    <div class="col-4">
+      <h2>La gouvernance 👑</h2>
+      <div class="data">
+        <p> Steve Jobs </p>
+        <p> Steve Wozniak </p>
+        <p> 34,567 shares </p>
       </div>
     </div>
   </div>
-  <div class="column project">
-    <div class="module" id="project-first">
-      <%# <%= render 'components/project_show/valuation' %> %>
-    </div>
-    <div class="module" id="project-second">
-      <div class="operation wrapper-card">
-        <%# <%= render 'components/project_show/projection' %> %>
-      </div>
-    </div>
-    <div class="module" id="project-third">
-      <%# <%= render 'components/project_show/thesis' %> %>
-    </div>
+  <div class="button-figures">
+    <button class="btn btn-ghost">Modifier</button>
+    <button class="btn btn-flat1">Valider</button>
   </div>
-  <div class="column financing">
-    <div class="module" id="project-first">
-      <%# <%= render 'components/project_show/engagement' %> %>
-    </div>
-    <div class="module risk-takers" id="project-second">
-      <h2 class="title">RISK TAKERS</h2>
-      <div class="team-cards">
-        <%# <% @investors_list.each do | investor| %> %>
-          <%# <%= render 'components/project_show/investors_list' %> %>
-        <%# <% end %> %>
-      </div>
-    </div>
-    <div class="module" id="project-third">
-      <%# <%= render 'components/project_show/NDA' %> %>
-      </div>
-    </div>
-  </div>
-</div>
+<br>
+<br>
+<br>
