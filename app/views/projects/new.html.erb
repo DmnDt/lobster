@@ -1,18 +1,14 @@
-<div class="wrapper-api dashboard">
-  <h1>Pour quel projet chercher vous de l'argent 💸</h1>
+<div class="colonne">
+  <h1>Pour quel projet chercher vous de l'argent ? 💸</h1>
   <div class="data">
     <%= simple_form_for @project do |f| %>
       <div class="container">
-        <div class="col-12 col-md-6 offset-lg-3">
+        <div class="container-data">
           <div class="form-inputs mt-5">
-            <p>Nom</p>
-            <%= f.input :name, label: false, class:"form-api" %>
-            <p>Industrie</p>
-            <%= f.input :industry, label: false, class:"form-api", collection: Project::INDUSTRIES %>
-            <p>Objectif</p>
-            <%= f.input :financing_thesis, class:"form-api", collection: Project::OBJECTIFS %>
-            <p>Montant total</p>
-            <%= f.input :total_amount,label:"Montant total", class:"form-api" %>
+            <%= f.input :name, label: false, placeholder:"Nom", input_html: { class:"form-api" } %>
+            <%= f.input :industry, label: false, input_html: { class:"form-api" }, prompt:"Industrie", collection: Project::INDUSTRIES %>
+            <%= f.input :financing_thesis, label: false, input_html: { class:"form-api" }, prompt:"Objectif",  collection: Project::OBJECTIFS %>
+            <%= f.input :total_amount,label:false, input_html: { class:"form-api" }, placeholder:"Montant total"  %>
             <%= f.input :status, label: false, input_html: { class: "d-none" } %>
             <%= f.button :submit,value:"Créer", class: 'btn btn-flat1' %>
           </div>
@@ -21,8 +17,6 @@
     <% end %>
   </div>
 </div>
-
-
-
-
-======
+<br>
+<br>
+<br>

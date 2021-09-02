@@ -91,6 +91,7 @@
       margin:0;
       .form-api{
           text-align: center;
+          text-align-last:center;
           padding: 8px 35px;
           border-radius: 50px;
           font-weight: lighter !important;
@@ -100,6 +101,9 @@
           border: 1px solid #FFA372 !important;
           color: #FFA372 !important;
           background-color:transparent;
+          &::placeholder{
+            color: #FFA372;
+          }
         }
       .fin{
         display: flex;
