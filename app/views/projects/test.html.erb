@@ -1,38 +1,35 @@
 <div class="wrapper-api dashboard">
+<%= simple_form_for investee, html: {class: "hidden", data: {fill_target: "newForm"}} do |f| %>
   <div class="elements-api">
     <h1>C'est bien votre société ? 🧐</h1>
   </div>
   <div class="row line">
-    <div class="col-4 colonne">
+    <div class="col-6 colonne">
       <h2>Les infos générales 📚</h2>
       <div class="data">
-        <p> Startup Inc. </p>
-        <p>2 rue de la Paix, 75001 Paris </p>
-        <p>Vente de produits informatiques</p>
+        <p><%= f.input :SIRET, input_html: { data: { fill_target: "siret" } } %></p>
+        <p><%= f.input :nom_entreprise, input_html: { data: { fill_target: "name" } } %></p>
+        <p><%= f.input :address, input_html: { data: { fill_target: "address" } } %></p>
+        <p><%= f.input :domaine_activite, input_html: { data: { fill_target: "activity" } } %></p>
       </div>
     </div>
-    <div class="col-4 colonne figures">
+    <div class="col-6 colonne figures">
       <h2>Les finances 💸</h2>
       <div class="data">
-        <div class="fin"><h5>CA</h5> <p> 3,000,000,000 € </p></div>
-        <div class="fin"><h5>%</h5> <p> 50% </p></div>
-        <div class="fin"><h5>EBE</h5> <p> 600,0000 € </p></div>
-        <div class="fin"><h5>%</h5> <p> 50% </p></div>
-      </div>
-    </div>
-    <div class="col-4 colonne">
-      <h2>La gouvernance 👑</h2>
-      <div class="data">
-        <p> Steve Jobs </p>
-        <p> Steve Wozniak </p>
-        <p> 34,567 shares </p>
+        <div class="fin"><h5>CA</h5> <p><%= f.input :chiffre_affaires, input_html: { data: { fill_target: "chiffreAffaires" } }%></p></div>
+        <div class="fin"><h5>%</h5> <p><%= f.input :taux_croissance_chiffre_affaires, input_html: { data: { fill_target: "croissanceChiffreAffaires" } }%></p></div>
+        <div class="fin"><h5>EBE</h5> <p><%= f.input :excedent_brut_exploitation, input_html: { data: { fill_target: "excedentBrutExploitation" } }%></p></div>
+        <div class="fin"><h5>%</h5> <p><%= f.input :taux_marge_EBITDA, input_html: { data: { fill_target: "tauxMargeEbitda" } } %></p></div>
       </div>
     </div>
   </div>
+  <%= f.input :api_data, label: false, input_html: { data: { fill_target: "apiData" }, class: 'd-none' } %>
   <div class="button-figures">
     <button class="btn btn-ghost">Modifier</button>
-    <button class="btn btn-flat1">Valider</button>
+    <%= f.button :submit, class: 'btn btn-flat1', label:"Valider" %>
   </div>
+<% end %>
+
 <br>
 <br>
 <br>

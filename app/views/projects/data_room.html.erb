@@ -12,7 +12,7 @@
       <div class="circle">
         <%= image_tag 'Apple.png' %>
       </div>
-      <h3>Title</h3>
+      <h3>Documents</h3>
       <h3>Actions</h3>
   </div>
   <div class="body-table">
@@ -22,16 +22,18 @@
           <%= render 'components/project_show/team_member' %>
         <% end %>
       </div>
-      <div class="names">
         <div class="all-documents">
           <% @project.documents.each do |document| %>
-            <div class="line">
+            <div class="line-data_room">
               <div class="index">
-                <h3 class="document-name"> 📂 <%= link_to document.filename, cl_image_path(document.key, format: :pdf), target:"_blank" %></h3>
+                <h3 class="document-name"> 📂  <%= document.filename%></h3>
               </div>
               <div class="actions">
                 <ul class="team-icons">
-                  <li><%= image_tag 'icons/view-1617652.png' %> </li>
+                  <li class="icons"> <%= link_to cl_image_path(document.key, format: :pdf), target:"_blank" do  %>
+                      <%= image_tag 'icons/view-1617652.png' %>
+                    <% end %>
+                  </li>
                   <li><%= image_tag 'icons/download-1617699.png' %> </li>
                   <li><%= image_tag 'icons/001-pen.png' %> </li>
                 </ul>
@@ -39,7 +41,6 @@
             </div>
           <% end %>
         </div>
-      </div>
     </div>
   </div>
 </div>
