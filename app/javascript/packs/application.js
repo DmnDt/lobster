@@ -40,6 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   functionDisplay();
   initSelect2();
   modal();
+  throwConfetti();
 });
 
 import "controllers"

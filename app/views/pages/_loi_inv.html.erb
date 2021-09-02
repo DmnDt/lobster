@@ -14,7 +14,9 @@
           <%= "Validé" %>
         <% end %>
       </li>
-      <button class= "btn btn-flat-red"><%= link_to "Dataroom", data_room_project_path(investment.project) %></button>
+      <div class="accept">
+        <button class= "btn btn-flat-red"><%= link_to "Dataroom", data_room_project_path(investment.project) %></button>
+      </div>
     </ul>
   <% end %>
 <% end %>
