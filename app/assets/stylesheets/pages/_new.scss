@@ -183,7 +183,7 @@ a:link {
   background-color: #f6f6f6;
   max-width: none;
   min-height: 350px;
-  margin: 150px auto;
+  margin: 100px auto;
   width: 80%;
   h1{
     font-size: 40px;
@@ -194,9 +194,10 @@ a:link {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0;
+    margin: 0;
     .container-data{
       width:80%;
+      margin-bottom: 40px;
       .form-inputs{
         text-align: right;
       }
@@ -234,4 +235,39 @@ a:link {
           }
       }
     }
+  }
+
+  .devise-form{
+    text-align: right;
+    font-size: 13px;
+    padding-right: 110px;
+    margin-bottom: 50px;
+  }
+
+  .devise-form {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    .btn-ghost{
+      margin-right: 10px !important;
+      padding: 8px 35px !important;
+      border-radius: 50px;
+      margin:0;
+      font-weight: lighter;
+      display: inline-block;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: middle;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      user-select: none;
+      border-color: #FF0082;
+      background-color: transparent;
+      color: #FF0082;
+    }
+
+  .btn-ghost:hover{
+    color: #fff;
+    background-color: #FF0082;
+    border-color: #FF0082;
+  }
   }

@@ -54,12 +54,31 @@
       border-radius: 50px;
       border: 1px solid #FF0082;
       transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      width: 100px;
     }
     a:hover{
       color: #FF0082 !important;
       font-weight: bolder !important;
       background-color: white;
       border-color: #FF0082;
+    }
+    button{
+      font-family: 'Nunito';
+      font-weight: bolder !important;
+      font-size: 15px;
+      text-decoration: none;
+      background-color: #FFA372;
+      color: white !important;
+      padding: 8px 35px;
+      border-radius: 50px;
+      border: 1px solid #FFA372;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    button:hover{
+       color: #FFA372 !important;
+      font-weight: bolder !important;
+      background-color: white;
+      border-color: #FFA372;
     }
   }
 }
