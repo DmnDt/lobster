@@ -22,7 +22,7 @@ class DocusignService < DocusignRest::Client
         subject: "The test email subject envelope",
         body: "Envelope body content here"
       },
-      template_id: '32e03b20-b91d-4eb1-81e7-149614c45f82',
+      template_id: '32fea0cf-8d0f-4556-8d80-f3668766d571',
       signers: [
         {
           embedded: true,
