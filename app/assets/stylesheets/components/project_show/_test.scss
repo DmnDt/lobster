@@ -50,7 +50,7 @@
   }
 }
 
-  .row{
+  .line{
     display: grid;
     align-items: flex-start;
     grid-template-columns: 1fr 1fr 1fr;
@@ -64,7 +64,7 @@
   }
 
 
-  .col-4{
+  .colonne{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,11 +91,11 @@
         display: inline-block;
         font-weight: 400;
         user-select: none;
-        border: 1px solid #FF0082;
-        border-color: #FF0082;
-        color: #FF0082;
+        border: 1px solid #FFA372;
+        border-color: #FFA372;
+        color: #FFA372;
         background-color:transparent;
-        border-color: #FF0082;
+        border-color: #FFA372;
       }
       .fin{
         display: flex;
