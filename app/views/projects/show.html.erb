@@ -54,6 +54,11 @@
           <li class="nav-item nav-button">
             <a class="nav-link" id="pills-company-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Entreprise</a>
           </li>
+          <% if (current_user == @project.investee.user )%>
+            <li class="nav-item nav-button">
+              <a> <%= link_to "🤓", data_room_project_path(@project), class:"button" %></a>
+            </li>
+          <% end %>
         </ul>
         <br>
         <br>
