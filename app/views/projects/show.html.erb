@@ -76,7 +76,7 @@
                       <div class="badge"> <span>CEO</span> </div>
                     </div>
                     <div class="mt-5">
-                      <h3 class="heading">"Thanks to Germany opening, we'll expect to make x5 on revenue in 3 years"</h3>
+                      <h5 class="heading">"Thanks to Germany opening, we'll expect to make x5 on revenue in 3 years"</h5>
                       <div class="mt-5">
                         <ul class="cards-icons">
                           <li><h6 class="icon">❤️</h6>  <p style="font-weight:bolder"><%= rand(0..10) %></p> </li>
@@ -108,7 +108,7 @@
                       <div class="badge"> <span>🦞🦞🦞</span> </div>
                     </div>
                     <div class="mt-5">
-                      <h3 class="heading">"Incredible team whith strong delivery. Overachieving their objectives. Bluechip investment"</h3>
+                      <h5 class="heading">"Incredible team whith strong delivery. Overachieving their objectives. Bluechip investment"</h5>
                       <div class="mt-5">
                         <ul class="cards-icons">
                           <li><h6 class="icon">❤️</h6>  <p style="font-weight:bolder"><%= rand(0..10) %></p> </li>
@@ -124,16 +124,18 @@
           </div>
           <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
             <div class="card-graph-project">
-                <div class="chart"><%= line_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
-                <div class="chart"><%= bar_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
-                <div class="chart"><%= area_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
+                <div class="chart"> <h5>Chiffre d'affaires</h5> <%= line_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
+                <div class="chart"><h5>Excédent brut d'exploitation</h5><%= bar_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
+                <div class="chart"><h5>Besoin en Fonds de Roulement</h5><%= area_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
+                <div class="chart"><h5>Dette Nette</h5><%= area_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
             <div class="card-graph-project">
-              <div class="chart"><%= line_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
-              <div class="chart"><%= bar_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
-              <div class="chart"><%= area_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
+              <div class="chart"> <h5>Chiffre d'affaires</h5> <%= line_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
+              <div class="chart"><h5>Excédent brut d'exploitation</h5><%= bar_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
+              <div class="chart"><h5>Besoin en Fonds de Roulement</h5><%= area_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
+              <div class="chart"><h5>Dette Nette</h5><%= area_chart({ "01/2021":1, "02/2021":2, "03/2021":3  })%></div>
             </div>
           </div>
         </div>
