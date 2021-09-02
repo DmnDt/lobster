@@ -235,3 +235,22 @@
 // .card-data .card-product-infos {
 //   padding: 16px;
 // }
+
+.btn-dataroom{
+  font-family: 'Nunito';
+  font-weight: bolder !important;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #FF0082;
+  color: white !important;
+  padding: 8px 35px;
+  border-radius: 50px;
+  border: 1px solid #FF0082;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-dataroom:hover{
+  color: #FF0082 !important;
+  font-weight: bolder !important;
+  background-color: white;
+  border-color: #FF0082;
+}
