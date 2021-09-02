@@ -15,7 +15,6 @@
   }
 }
 
-
 .search_input {
     color: white;
     border: 0;
@@ -63,7 +62,7 @@ a:link {
 }
 
 .new-investee-grid {
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr 1fr;
     grid-gap: 4em;
 }
@@ -74,7 +73,7 @@ a:link {
 
 
 .row{
-  display: grid;
+  display: grid !important;
   align-items: flex-start;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
@@ -84,6 +83,11 @@ a:link {
     font-weight: bolder;
     text-align: center;
   }
+}
+
+.form-control {
+  width: 100% !important;
+  //display: grid !important;
 }
 
 .col-6 {
