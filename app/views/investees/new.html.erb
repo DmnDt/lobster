@@ -1,59 +1,16 @@
-
-<div class="container-search">
-  <br>
-  <h1>👇 Entrez votre SIRET...</h1>
-  <br>
-  <div class="d-flex justify-content-center h-100">
-  <br>
-    <div class="search">
-      <input class="search_input" type="text" name="" placeholder="Viender petit SIRET...">
-      <a href="#" class="search_icon">
-        <i class="fa fa-search"></i>
-      </a>
-    </div>
-  <br>
-  </div>
-  <h1>...Et laissez la magie opérer 🪄</h1>
-</div>
-
-
-<br>
-<br>
-<br>
-
-
-=====================
-
-<br>
-<br>
-<br>
-
-
-
-
-
-
-<%= simple_form_for @investee do |f| %>
-<div class="container">
-    <div>
-      <div class="col-12 col-md-6 offset-lg-3">
-        <div class="bg-white rounded p-3 mt-5 shadow">
-          <div class="form-inputs inv-new" data-controller="fill">
-          <%= f.input :SIRET, input_html: { data: { action: 'keyup->fill#autocomplete' } } %>
-          <%= f.input :nom_entreprise, input_html: { data: { fill_target: "name" } } %>
-          <%= f.input :address, input_html: { data: { fill_target: "address" } } %>
-          <%= f.input :domaine_activite, input_html: { data: { fill_target: "activity" } } %>
-          <%= f.input :chiffre_affaires, input_html: { data: { fill_target: "chiffreAffaires" } }  %>
-          <%= f.input :taux_croissance_chiffre_affaires, input_html: { data: { fill_target: "croissanceChiffreAffaires" } }  %>
-          <%= f.input :marge_brute, input_html: { data: { fill_target: "margeBrute" } } %>
-          <%= f.input :taux_marge_brute, input_html: { data: { fill_target: "tauxMargeBrute" } } %>
-          <%= f.input :excedent_brut_exploitation, input_html: { data: { fill_target: "excedentBrutExploitation" } }  %>
-          <%= f.input :taux_marge_EBITDA, input_html: { data: { fill_target: "tauxMargeEbitda" } } %>
-          <%= f.input :api_data, label: false, input_html: { data: { fill_target: "apiData" }, class: 'd-none' } %>
-          <%= f.button :submit, class: 'btn btn-primary' %>
-           </div>
-        </div>
+<div class="new-investee-form container" data-controller="fill">
+  <div class="container-search" data-fill-target="containerSearch">
+    <h1>👇 Entrez votre SIRET...</h1>
+    <div class="d-flex justify-content-center h-100">
+      <div class="search">
+        <input class="search_input" data-fill-target="inputSearch" type="text" name="" placeholder="Viender petit SIRET...">
+        <span class="search_icon" data-action="click->fill#updateForm">
+          <i class="fa fa-search"></i>
+        </span>
       </div>
     </div>
+    <h1>...Et laissez la magie opérer</h1>
   </div>
-<% end %>
+  <%= render "new-form", investee: @investee %>
+
+</div>
