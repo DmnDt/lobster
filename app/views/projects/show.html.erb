@@ -56,7 +56,7 @@
           </li>
           <% if (current_user == @project.investee.user )%>
             <li class="nav-item nav-button">
-              <a> <%= link_to "🤓", data_room_project_path(@project), class:"button" %></a>
+              <a> <%= link_to "Dataroom", data_room_project_path(@project), class:"btn btn-flat1" %></a>
             </li>
           <% end %>
         </ul>
