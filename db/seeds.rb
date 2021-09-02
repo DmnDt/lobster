@@ -29,8 +29,8 @@ investor.save!
 # investee_steve_jobs = Investee.create!(user_id: steve_jobs.id, SIRET: "60482993688834", nom_entreprise: "Apple", address: "837 Lake Forest Ave. San Pedro, CA 90731", domaine_activite: "Informatique", chiffre_affaires: 400324, taux_croissance_chiffre_affaires: 1.3, marge_brute: 34000, taux_marge_brute: 33, excedent_brut_exploitation: 45667, taux_marge_EBITDA: 21)
 # investee_elon_musk = Investee.create!(user_id: elon_musk.id, SIRET: "12824369313712", nom_entreprise: "Tesla", address: "941 Lake Forest Ave. San Pedro, CA 90731", domaine_activite: "Automobile", chiffre_affaires: 678094, taux_croissance_chiffre_affaires: 1.08, marge_brute: 24500, taux_marge_brute: 19, excedent_brut_exploitation: 50667, taux_marge_EBITDA: 17)
 
-# investor_user = Investor.create!(user_id: investor.id)
-# investor_user.save!
+investor_user = Investor.create!(user_id: investor.id)
+investor_user.save!
 
 # project_steve_jobs = Project.create!(name: "New offices", investee: investee_steve_jobs, industry: "Informatique", valuation: 2213402, conversion_rate: 1, coupon: 3, conversion_date: "2021/5/4", status: 0, total_amount: 10000, financing_thesis: "Buy offices in Texas")
 # project_elon_musk = Project.create!(name: "AI is coming to Tesla", investee: investee_elon_musk, industry: "Automobile", valuation: 1234012, conversion_rate: 2, coupon: 5, conversion_date: "2022/4/9", status: 0, total_amount: 35000, financing_thesis: "IA department foundation")

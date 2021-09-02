@@ -4,16 +4,16 @@
       <div class="col-12 col-md-6 offset-lg-3">
         <div class="bg-white rounded p-3 mt-5 shadow">
           <div class="form-inputs mt-5">
-          <%= f.input :name %>
-          <%= f.input :industry %>
-          <%= f.input :financing_thesis %>
-          <%= f.input :valuation %>
-          <%= f.input :coupon %>
-          <%= f.input :conversion_rate %>
-          <%= f.input :conversion_date %>
-          <%= f.input :total_amount %>
+          <%= f.input :name, label:"Nom" %>
+          <%= f.input :industry, collection: Project::INDUSTRIES, label:"Industrie" %>
+          <%= f.input :financing_thesis, collection: Project::OBJECTIFS, label:"Objectif" %>
+          <%# <%= f.input :valuation %>
+          <%# <%= f.input :coupon %>
+          <%# <%= f.input :conversion_rate %>
+          <%# <%= f.input :conversion_date %>
+          <%= f.input :total_amount,label:"Montant total" %>
           <%= f.input :status, label: false, input_html: { class: "d-none" } %>
-          <%= f.button :submit, class: 'btn btn-primary' %>
+          <%= f.button :submit,value:"Créer votre projet", class: 'btn btn-primary' %>
            </div>
         </div>
       </div>
