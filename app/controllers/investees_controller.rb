@@ -6,6 +6,7 @@ class InvesteesController < ApplicationController
 
   def create
     @investee = Investee.new(investee_params)
+    @investee.api_data = JSON.parse(@investee.api_data)
     @user = current_user
     @investee.user = @user
 
