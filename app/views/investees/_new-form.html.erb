@@ -28,36 +28,3 @@
     <%= f.button :submit, "Valider", class: 'btn btn-flat1'  %>
   </div>
 <% end %>
-
-
-  =======
-
-
-
-
-
-  <%= simple_form_for investee, html: {class: "hidden", data: {fill_target: "newForm"}} do |f| %>
-    <div class="elements-api">
-      <h1>C'est bien votre société ? 🧐</h1>
-    </div>
-    <div class="row">
-      <div class="col-6">
-        <h2>Les informations générales 🤓</h3>
-        <%= f.input :SIRET, input_html: { data: { fill_target: "siret" } } %>
-        <%= f.input :nom_entreprise, input_html: { data: { fill_target: "name" } } %>
-        <%= f.input :address, label:"adresse", input_html: { data: { fill_target: "address" } } %>
-        <%= f.input :domaine_activite, input_html: { data: { fill_target: "activity" } } %>
-      </div>
-      <div class="col-6 figures">
-        <h2>Le financier 🤑</h3>
-        <%= f.input :chiffre_affaires, input_html: { data: { fill_target: "chiffreAffaires" } }  %>
-        <%= f.input :taux_croissance_chiffre_affaires, input_html: { data: { fill_target: "croissanceChiffreAffaires" } }  %>
-        <%#= f.input :marge_brute, input_html: { data: { fill_target: "margeBrute" } } %>
-        <%#= f.input :taux_marge_brute, input_html: { data: { fill_target: "tauxMargeBrute" } } %>
-        <%= f.input :excedent_brut_exploitation, input_html: { data: { fill_target: "excedentBrutExploitation" } }  %>
-        <%= f.input :taux_marge_EBITDA, input_html: { data: { fill_target: "tauxMargeEbitda" } } %>
-      </div>
-    </div>
-    <%= f.input :api_data, label: false, input_html: { data: { fill_target: "apiData" }, class: 'd-none' } %>
-    <%= f.button :submit, class: 'btn btn-primary' %>
-  <% end %>
