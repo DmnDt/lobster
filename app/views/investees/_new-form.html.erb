@@ -1,3 +1,41 @@
+<div class="wrapper-api dashboard">
+<%= simple_form_for investee, html: {class: "hidden", data: {fill_target: "newForm"}} do |f| %>
+  <div class="elements-api">
+    <h1>C'est bien votre société ? 🧐</h1>
+  </div>
+  <div class="row line">
+    <div class="col-6 colonne">
+      <h2>Les infos générales 📚</h2>
+      <div class="data">
+        <%= f.input :SIRET, label: false, input_html: { class:"form-api", data: { fill_target: "siret" } } %>
+        <%= f.input :nom_entreprise, label: false, input_html: { class:"form-api", data: { fill_target: "name" } } %>
+        <%= f.input :address, label: false, input_html: { class:"form-api", data: { fill_target: "address" } } %>
+        <%= f.input :domaine_activite, label: false, input_html: { class:"form-api", data: { fill_target: "activity" } } %>
+      </div>
+    </div>
+    <div class="col-6 colonne figures">
+      <h2>Les finances 💸</h2>
+      <div class="data">
+        <div class="fin"><h5>CA</h5><%= f.input :chiffre_affaires, label: false, input_html: { class:"form-api", data: { fill_target: "chiffreAffaires" } }%></div>
+        <div class="fin"><h5>%</h5> <%= f.input :taux_croissance_chiffre_affaires, label: false, input_html: { class:"form-api", data: { fill_target: "croissanceChiffreAffaires" } }%></div>
+        <div class="fin"><h5>EBE</h5> <%= f.input :excedent_brut_exploitation, label: false, input_html: { class:"form-api", data: { fill_target: "excedentBrutExploitation" } }%></div>
+        <div class="fin"><h5>%</h5> <%= f.input :taux_marge_EBITDA, label: false, input_html: { class:"form-api", data: { fill_target: "tauxMargeEbitda" } } %></div>
+      </div>
+    </div>
+  </div>
+  <%= f.input :api_data, label: false, input_html: { data: { fill_target: "apiData" }, class: 'd-none' } %>
+  <div class="button-figures">
+    <%= f.button :submit, "Valider", class: 'btn btn-flat1'  %>
+  </div>
+<% end %>
+
+
+  =======
+
+
+
+
+
   <%= simple_form_for investee, html: {class: "hidden", data: {fill_target: "newForm"}} do |f| %>
     <div class="elements-api">
       <h1>C'est bien votre société ? 🧐</h1>

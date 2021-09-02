@@ -15,7 +15,7 @@
     font-family: 'Rampart One';
     font-size: 50px;
     color: #FFA372;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     span{
       color: #FA7F72;
     }
@@ -64,6 +64,11 @@
   }
 }
 
+.row-data_room{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .header-table{
   display: flex;
@@ -72,6 +77,11 @@
   height: 80px;
   background-color: #FFA372;
   padding: 0 220px;
+    h3{
+    font-family: 'Nunito';
+    font-weight: bolder;
+    font-size: 18px;
+    }
   img{
     width: 35px;
     height: 40px;
@@ -86,11 +96,23 @@
     align-items: center;
     justify-content: center;
   }
-  h3{
-    font-family: 'Nunito';
-    font-weight: bolder;
-    font-size: 15px;
-    margin: 0;
+}
+
+.actions .team-icons{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin :0;
+  width: 40%;
+  a:hover{
+    font-weight: bolder !important;
+    background-color: #FF0082;
+    padding: 5px 5px;
+    border-radius: 50px;
+    img{
+      width:24px;
+    }
   }
 }
 
@@ -118,13 +140,11 @@
   border: 1px solid rgb(228, 228, 228);
 }
 
-// .all-documents{
-//   display: flex;
-//   justify-content: space-between;
-//   flex-direction: column;
-//   align-items: center;
-//   text-align: left;
-// }
+.all-documents{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
 
 .names{
   width: 58%;
@@ -152,14 +172,22 @@
   }
 }
 
-.line{
+.line-data_room{
   display: flex;
-  justify-content: space-between;
+  flex:1;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .index{
   display: flex;
+  flex:1;
+   h3{
+    font-family: 'Nunito';
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 20px;
+  }
 }
 
 .actions{
