@@ -3,7 +3,7 @@
   border-radius: 20px;
   padding-bottom: 2rem;
   font-family: "Work Sans", "Helvetica", "sans-serif";
-  background-color: #F6F6F6;
+  // background-color: #F6F6F6;
   padding: 15vh 15vh 30vh 15vh;
   .elements-api{
   margin-bottom: 20px;
@@ -17,7 +17,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    margin: 30px;
     width: 100%;
     .btn{
       padding: 8px 35px;
@@ -37,6 +36,7 @@
       margin-right: 20px;
       color: white;
       margin-left: 10px;
+      margin-top: 30px;
     }
     .btn-ghost{
       background-color: transparent;
@@ -55,6 +55,7 @@
     align-items: flex-start;
     grid-template-columns: 1fr 1fr;
     grid-gap: 16px;
+    margin-bottom: 30px;
     h2{
       font-family: 'Nunito';
       font-size: 20px;
@@ -70,7 +71,7 @@
     align-items: center;
     padding: 20px;
     border-radius: 30px;
-    background-color: white;
+    background-color: #f6f6f6;
     max-width: none;
     min-height: 350px;
     h2{
@@ -90,6 +91,7 @@
       margin:0;
       .form-api{
           text-align: center;
+          text-align-last:center;
           padding: 8px 35px;
           border-radius: 50px;
           font-weight: lighter !important;
@@ -99,6 +101,9 @@
           border: 1px solid #FFA372 !important;
           color: #FFA372 !important;
           background-color:transparent;
+          &::placeholder{
+            color: #FFA372;
+          }
         }
       .fin{
         display: flex;
