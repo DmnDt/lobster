@@ -56,7 +56,9 @@
     </div>
   </div>
   <div class="text-right">
-  <%= link_to "Publier 🚀", investee_finish_path, class: "btn btn-dataroom mt-3" %>
+  <% if (current_user == @project.investee.user ) %>
+    <%= link_to "Publier 🚀", investee_finish_path, class: "btn btn-dataroom mt-3" %>
+  <% end %>
   </div>
 </div>
 
