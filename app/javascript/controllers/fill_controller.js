@@ -34,7 +34,6 @@ export default class extends Controller {
         // this.tauxMargeBruteTarget.value = data.finances[0].taux_marge_brute;
         this.excedentBrutExploitationTarget.value = data.finances[0].excedent_brut_exploitation;
         this.tauxMargeEbitdaTarget.value = data.finances[0].taux_marge_EBITDA;
-        console.log(JSON.stringify(data));
         this.apiDataTarget.value = JSON.stringify(data);
       });
     }
