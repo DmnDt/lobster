@@ -42,7 +42,7 @@ document.addEventListener('turbolinks:load', () => {
   functionDisplay();
   initSelect2();
   modal();
-  // chartFormatter();
+  chartFormatter();
 });
 
 import "controllers"
