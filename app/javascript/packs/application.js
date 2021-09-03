@@ -31,7 +31,8 @@ import { modal } from "../components/modal";
 import { initSelect2 } from '../plugins/init_select2';
 // import "chartkick/chart.js"
 import "chartkick/highcharts";
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
+import { chartFormatter } from "../components/chart_formatter";
 
 // probablement event listener se desactive en clickant sur search
 
@@ -41,6 +42,7 @@ document.addEventListener('turbolinks:load', () => {
   functionDisplay();
   initSelect2();
   modal();
+  // chartFormatter();
 });
 
 import "controllers"

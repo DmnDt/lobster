@@ -45,7 +45,7 @@ class DocusignService < DocusignRest::Client
       envelope_id: get_envelope["envelopeId"],
       name: @doc_user.full_name,
       email: @doc_user.email,
-      return_url: 'http://google.com'
+      return_url: 'https://www.getlobster.co/investor_finish'
     )
   end
 
