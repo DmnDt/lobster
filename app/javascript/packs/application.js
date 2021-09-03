@@ -30,7 +30,8 @@ import { modal } from "../components/modal";
 // import { initSelect2 } from '../components/init_select2';
 import { initSelect2 } from '../plugins/init_select2';
 // import "chartkick/chart.js"
-import "chartkick/highcharts"
+import "chartkick/highcharts";
+import swal from 'sweetalert';
 
 // probablement event listener se desactive en clickant sur search
 
