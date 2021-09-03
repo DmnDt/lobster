@@ -5,12 +5,12 @@
     </div>
     <div class="cta">
       <button class="chrono">24j 12h 23min 🚨 </button>
-      <li><button>Nouveau document 📑</button></li>
+      <%# <li><button>Nouveau document 📑</button></li> %>
       <li><%= link_to "Signer ✍️", "#{@url_docusign}", target:"_blank"%></li>
       <% if (current_user == @project.investee.user )%>
         <li>
           <div class="upload" data-controller="upload-documents">
-            <button class="btn-dataroom" data-action="click->upload-documents#select">Ajouter des fichiers</button>
+            <button class="btn-dataroom" data-action="click->upload-documents#select">Ajouter des fichiers 📑</button>
             <%= simple_form_for @project, html: { class: "d-none", data: { upload_documents_target: "form" } } do |f| %>
               <%= f.input :documents, as: :file, label: false, input_html: { multiple: true, data: { action: "change->upload-documents#change", upload_documents_target: "input" } } %>
               <%= f.button :submit, "Valider" %>
