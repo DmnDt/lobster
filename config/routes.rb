@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => {:registrations => "registrations"}
   root to: 'pages#home'
+  get "investee_finish", to: "pages#investee_finish"
+  get "investor_finish", to: "pages#investor_finish"
   get "dashboard", to: "pages#dashboard"
   get "docusign", to: "pages#docusign"
   resources :investments, only: [:index] do
@@ -15,8 +17,6 @@ Rails.application.routes.draw do
     resources :investments, only: [:create]
     member do
       get "data_room"
-      get "test"
-      get "end_investor"
     end
   end
 end

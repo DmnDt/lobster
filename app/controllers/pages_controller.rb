@@ -4,6 +4,12 @@ class PagesController < ApplicationController
   def home
   end
 
+  def investor_finish
+  end
+
+  def investee_finish
+  end
+
   def dashboard
     if current_user.investor.present? # Si user = investor
       @interested_investments = Investment.where(investor: current_user.investor).interested
