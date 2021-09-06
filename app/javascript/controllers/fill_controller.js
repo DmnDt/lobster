@@ -12,7 +12,7 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = ["name", "address", "activity", "chiffreAffaires", "croissanceChiffreAffaires", "margeBrute", "tauxMargeBrute", "excedentBrutExploitation", "tauxMargeEbitda", "apiData", "inputSearch", "newForm", "containerSearch", "siret"];
 
-  connect() {
+  connect() {  //Voir la doc de stimulus, on a besoin d'initialiser avec ce connect
   }
 
   autocomplete(e){
@@ -24,17 +24,15 @@ export default class extends Controller {
       await fetch(`https://api.pappers.fr/v1/entreprise?siret=${value}&api_token=0c665a6e4a30a3f1cb26ce756a2bb42eec327381493a9373`)
       .then(response => response.json())
       .then((data) => {
-        this.siretTarget.value = data.siege.siret
+        this.siretTarget.value = data.siege.siret // On itere dans l'API pour remplir les champs correspondants
         this.nameTarget.value = data.nom_entreprise;
         this.addressTarget.value = data.siege.adresse_ligne_1 + " " + data.siege.adresse_ligne_2 + " " + data.siege.ville + " " + data.siege.pays;
         this.activityTarget.value = data.domaine_activite;
         this.chiffreAffairesTarget.value = data.finances[0].chiffre_affaires;
         this.croissanceChiffreAffairesTarget.value = data.finances[0].taux_croissance_chiffre_affaires;
-        // this.margeBruteTarget.value = data.finances[0].marge_brute;
-        // this.tauxMargeBruteTarget.value = data.finances[0].taux_marge_brute;
         this.excedentBrutExploitationTarget.value = data.finances[0].excedent_brut_exploitation;
         this.tauxMargeEbitdaTarget.value = data.finances[0].taux_marge_EBITDA;
-        this.apiDataTarget.value = JSON.stringify(data);
+        this.apiDataTarget.value = JSON.stringify(data); // On transforme le retour de l'API en string pour le stocker dans notre column via le form
       });
     }
   }
@@ -46,9 +44,9 @@ export default class extends Controller {
 
   async updateForm() {
     const siret = this.inputSearchTarget.value;
-    this.vanishIn();//animation
-    await this.fetchApi(siret);
-    this.newFormTarget.classList.remove("hidden");
-    this.containerSearchTarget.classList.add("hidden");
+    this.vanishIn();//animation SIRET
+    await this.fetchApi(siret); // On attend que le call API soit fait
+    this.newFormTarget.classList.remove("hidden"); // On "décache" le form
+    this.containerSearchTarget.classList.add("hidden"); // On cache le champ SIRET
   }
 }

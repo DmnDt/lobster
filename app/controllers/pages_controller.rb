@@ -17,14 +17,9 @@ class PagesController < ApplicationController
       @validated_investments = Investment.where(investor: current_user.investor).validated
     elsif current_user.investee.present? # Si user = investee
       @projects = Project.where(investee: current_user.investee)
-      # @investments = @projects.map{ |project| project.investments }.flatten
+      # @investments = @projects.map{ |project| project.investments }.flatten  // Ligne 20 et 21 font la meme chose, 2 solutions possibles
       @investments= Investment.includes(:project).where(projects: {investee: current_user.investee})
     end
   end
 
-  # def docusign
-  #   # render json: params.to_json
-  #   @url = DocusignService.new.get_url["url"]
-  #   raise
-  # end
 end

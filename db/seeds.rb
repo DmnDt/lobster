@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'open-uri'
+require 'open-uri' # Pour le call API
 
 User.destroy_all
 Investee.destroy_all
@@ -14,42 +14,9 @@ Project.destroy_all
 
 investor = User.create!(full_name: 'Investor', email: 'investor@gmail.com', password: 'azerty', category: 'investor')
 investor.save!
-
-# steve_jobs = User.create!(full_name: 'Steve Jobs', email: 'steve-jobs@apple.com', password: 'azerty', category: 'investee')
-# steve_jobs.photo.attach(io: File.open('app/assets/images/Apple.png'), filename: "JP2", content_type: "image/png")
-# steve_jobs.save!
-# puts "#{steve_jobs.full_name}"
-
-# elon_musk = User.create!(full_name: 'Elon Musk', email: 'elon-musk@tesla.com', password: 'azerty', category: 'investee')
-# elon_musk.photo.attach(io: File.open('app/assets/images/Tesla.png'), filename: "JP2", content_type: "image/png")
-# elon_musk.save!
-# puts "#{elon_musk.full_name}"
-
-
-# investee_steve_jobs = Investee.create!(user_id: steve_jobs.id, SIRET: "60482993688834", nom_entreprise: "Apple", address: "837 Lake Forest Ave. San Pedro, CA 90731", domaine_activite: "Informatique", chiffre_affaires: 400324, taux_croissance_chiffre_affaires: 1.3, marge_brute: 34000, taux_marge_brute: 33, excedent_brut_exploitation: 45667, taux_marge_EBITDA: 21)
-# investee_elon_musk = Investee.create!(user_id: elon_musk.id, SIRET: "12824369313712", nom_entreprise: "Tesla", address: "941 Lake Forest Ave. San Pedro, CA 90731", domaine_activite: "Automobile", chiffre_affaires: 678094, taux_croissance_chiffre_affaires: 1.08, marge_brute: 24500, taux_marge_brute: 19, excedent_brut_exploitation: 50667, taux_marge_EBITDA: 17)
-
 investor_user = Investor.create!(user_id: investor.id)
 investor_user.save!
 
-# project_steve_jobs = Project.create!(name: "New offices", investee: investee_steve_jobs, industry: "Informatique", valuation: 2213402, conversion_rate: 1, coupon: 3, conversion_date: "2021/5/4", status: 0, total_amount: 10000, financing_thesis: "Buy offices in Texas")
-# project_elon_musk = Project.create!(name: "AI is coming to Tesla", investee: investee_elon_musk, industry: "Automobile", valuation: 1234012, conversion_rate: 2, coupon: 5, conversion_date: "2022/4/9", status: 0, total_amount: 35000, financing_thesis: "IA department foundation")
-
-# document1 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1630057146/Balance_Sheet_ek8qmu.pdf")
-# project_steve_jobs.documents.attach(io: document1, filename: 'Bilan.pdf', content_type: 'application/pdf')
-# document2 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1630057164/Financials_x34qf5.pdf")
-# project_steve_jobs.documents.attach(io: document2, filename: 'compte de résultat.pdf', content_type: 'application/pdf')
-# project_steve_jobs.save!
-
-
-# document3 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1630057146/Balance_Sheet_ek8qmu.pdf")
-# document4 = URI.open("https://res.cloudinary.com/dgkikk5i4/image/upload/v1630057164/Financials_x34qf5.pdf")
-# project_elon_musk.documents.attach(io: document3, filename: 'Bilan.pdf', content_type: 'application/pdf')
-# project_elon_musk.documents.attach(io: document4, filename: 'compte de résultat.pdf', content_type: 'application/pdf')
-# project_elon_musk.save!
-
-# stevejobsphoto = https://res.cloudinary.com/dgkikk5i4/image/upload/v1629811189/apple-steve-jobs-big1-1280x720_hdfvpw.jpg
-# elonmuskphoto = https://res.cloudinary.com/dgkikk5i4/image/upload/v1629811194/Elon_Musk_Royal_Society_mk09mp.jpg
 
 thomas_tlantenga = User.create!(full_name: 'Thomas_Tlantenga', email: 'thomas_tlantenga@vinted.com', password: 'azerty', category: 'investee')
 thomas_tlantenga.photo.attach(io: File.open('app/assets/images/Vinted_logo.png'), filename: "JP2", content_type: "image/png")

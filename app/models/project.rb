@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
   belongs_to :investee
-  has_many_attached :documents
+  has_many_attached :documents # PDFs de la dataroom
   has_one :user, through: :investee
   has_many :investments
   INDUSTRIES =['Tech', 'E-commerce', 'IT finance', 'Deep tech', 'Transformation industrielle', 'Agroalimentaire', 'Téléphonie', 'Banque en ligne' ]
@@ -8,8 +8,7 @@ class Project < ApplicationRecord
   include PgSearch::Model
   pg_search_scope :search_by_name_and_industry,
                   against: [ :name, :industry ], # Search by project name and/or industry
-                  # ignoring: :accents, (TO DO LATER, USER RIGHTS PRBLM)
                   using: {
-                    tsearch: { any_word: true, prefix: true }
+                    tsearch: { any_word: true, prefix: true } # Options de pg_search
                   }
 end

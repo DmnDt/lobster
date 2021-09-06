@@ -1,7 +1,7 @@
 import 'select2';
 import $ from 'jquery';
-// import 'select2/dist/css/select2.css';
 
+//Init de Select2 (barre de recherche index avec tags)
 
 const initSelect2 = () => {
   $('.select2').select2({
@@ -9,10 +9,5 @@ const initSelect2 = () => {
   });
 };
 
-// const initSelect2 = () => {
-//   $(document).ready(function () {
-//     $('.js-example-basic-multiple').select2();
-//   });
-// };
 
 export { initSelect2 };

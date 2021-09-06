@@ -1,3 +1,5 @@
+//Animation vanishIn pour le SIRET, ajoute une class magictime vanishIn à la div du form au submit du SIRET
+
 const selector = document.querySelector('.yourdiv')
 selector.classList.add('magictime', 'puffIn')
 

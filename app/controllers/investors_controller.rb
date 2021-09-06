@@ -1,10 +1,10 @@
 class InvestorsController < ApplicationController
-  def new
+  def new # Definir instances accessible pour la page form
     @investor = Investor.new
     @user = current_user
   end
 
-  def create
+  def create # Ce qui se passe apres le submit du form Investor_new
     @investor = Investor.new(investor_params)
     @user = current_user
     @investor.user = @user

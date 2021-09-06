@@ -7,6 +7,8 @@
 //   <h1 data-target="hello.output"></h1>
 // </div>
 
+// Code de thomas pour cacher le form d'upload de documents et l'utiliser à travers un bouton customisé
+
 import { Controller } from "stimulus"
 
 export default class extends Controller {

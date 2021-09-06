@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
   def data_room
     @team_members = %w(Jean-Michel Jean-Claude Roberta) #generate array with API PAPPERS
     @project = Project.find(params[:id])
-    @url_docusign = DocusignService.new(doc_user:current_user).get_url["url"]
+    @url_docusign = DocusignService.new(doc_user:current_user).get_url["url"] # Docusign ? ^^
   end
 
   private
